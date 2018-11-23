@@ -2,7 +2,6 @@
     margin:0;
     padding:0;
 }
-
 div.section {
     width:100%;
     min-height:100%;
@@ -20,15 +19,24 @@ div.section {
 .container{
     flex: 1 1 auto;
     background:gray;
-    padding-left:10%;
-    padding-right:10%;
+    padding-left:10em;
+    padding-right:10em;
 }
 .header{
     flex: 0 1 auto;
-    background:blue;
-    padding:2vmin;
+    background:red;
+    padding:1em;
+    display:flex;
+    align-items:center;
+}
+.header a{
+    margin-right:0.5em;
+}
+.header a:last-of-type{
+    margin-right:0em;
 }
 .header h1{
+    flex: 1 1 auto;
     font-size:2em;
     color: white;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
