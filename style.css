@@ -1,6 +1,7 @@
 * {
     margin:0;
     padding:0;
+    box-sizing:border-box;
 }
 div.section {
     width:100%;
@@ -23,7 +24,7 @@ div.section {
     padding-right:10em;
 }
 .header{
-    flex: 0 1 auto;
+    flex: 0 1 4.5rem;
     background:#2C3E50;
     padding:0rem 1.5rem;/*should the vertical padding be in the items or in the container?*/
     display:flex;
@@ -31,13 +32,15 @@ div.section {
 }
 .header a{
     padding:1.7rem 0.25rem;
-    font-size:1.1em;
+    font-size:1.1rem;
+    line-height:100%;
     color:white;
     text-decoration: none;
 }
 .header h1{
     flex: 1 1 auto;
-    font-size:1.5em;
+    font-size:1.5rem;
+    line-height: 100%;
     color: white;
     font-weight:300;
     padding:1.5rem 0rem;
