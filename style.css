@@ -19,38 +19,40 @@ div.section {
 }
 .container{
     flex: 1 1 auto;
-    background:gray;
+    background:white;
     padding-left:10em;
     padding-right:10em;
 }
 .header{
-    flex: 0 1 4.5rem;
-    background:#2C3E50;
-    padding:0rem 1.5rem;/*should the vertical padding be in the items or in the container?*/
-    display:flex;
-    align-items:center;
+    height:4.5rem;
+    background:white;
+    overflow: hidden;
+    white-space: nowrap;
+    color:#757575;
+    line-height:4.5rem;
+    box-shadow:0px 0px 4px black;
+}
+.header div.oi::before {
+    padding:0rem 1.5rem;
+    font-size:1.1rem;
+}
+div.oi{
+    display:inline-block;
 }
 .header a{
-    padding:1.7rem 0.25rem;
-    font-size:1.1rem;
-    line-height:100%;
-    color:white;
+    padding:0rem 0.25rem;
     text-decoration: none;
 }
 .header h1{
-    flex: 1 1 auto;
     font-size:1.5rem;
-    line-height: 100%;
-    color: white;
-    font-weight:300;
-    padding:1.5rem 0rem;
+    display:inline;
 }
 html {
     height:100%;
 }
 body {
     height:100%;
-    font-family: "Lato";
+    font-family: "Lato", "Trebuchet MS", sans-serif;
 }
 h1{
     font-weight:300;
