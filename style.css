@@ -61,7 +61,6 @@ h1{
 .stuffs h1{
     font-size:5rem;
     font-weight:200;
-    color:#555;
 }
 .stuffs p {
     font-size:1.5rem;
@@ -72,4 +71,5 @@ h1{
 .stuffs {
     padding:4rem 1rem;
     text-align:center;
+    color:#555;
 }
