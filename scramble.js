@@ -1,7 +1,7 @@
 words = ["Learner","Thinker","Designer","Coder","Engineer"];
 index = -1;
 statictime = 2000;
-dynamictime = 500;
+dynamictime = 510;
 function wait(){
     setTimeout(fadeout,statictime);
 }
