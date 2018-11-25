@@ -1,5 +1,5 @@
 words = ["Learner","Thinker","Designer","Coder","Engineer"];
-index = 0;
+index = -1;
 statictime = 2000;
 dynamictime = 500;
 function wait(){
