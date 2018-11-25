@@ -8,13 +8,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <div class="header-container">
     <div class="header">
-        <div class="oi" data-glyph="menu"></div>
+        <div class="oi" data-glyph="menu" onclick="show()"></div>
         <h1>Trevor Jex</h1>
         <!-- <a href="#">test</a>
         <a href="#">test2</a>
         <a href="#">test3</a> -->
     </div>
+    <div id="menu">
+        <div class="title">
+            <h1>Trevor Jex</h1>
+        </div>
+    </div>
 </div>
+<div id="menu-shade" onclick="hide()"></div>
 <div class="stuffs">
     <h1 id="scramble">Trevor Jex</h1>
     <p>I am a software engineer specializing in Python and JavaScript development.</p>
@@ -31,6 +37,18 @@
             this.hideTitleBar = setTimeout(() => document.getElementsByClassName("header")[0].style.top = "0rem", 100);
         }
         this.oldScroll = this.scrollY;
+    }
+</script>
+<script>
+    show = function () {
+        document.getElementById("menu").style.left = "0rem";
+        document.getElementById("menu-shade").classList.add("visible");
+        document.body.style.overflow = "hidden";
+    }
+    hide = function () {
+        document.getElementById("menu").style.left = "-12rem";
+        document.getElementById("menu-shade").classList.remove("visible");
+        document.body.style.overflow = "scroll";
     }
 </script>
 <script src="scramble.js"></script>
