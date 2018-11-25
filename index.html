@@ -16,7 +16,7 @@
     </div>
 </div>
 <div class="stuffs">
-    <h1>Learner.</h1>
+    <h1 id="scramble">Learner.</h1>
     <p>I am a software engineer specializing in Python and JavaScript development.</p>
 </div>
 <div style="height:500rem">
@@ -25,13 +25,14 @@
     window.onscroll = function (e) {
         clearTimeout(this.hideTitleBar);
         if (this.scrollY > this.oldScroll) {
-            this.hideTitleBar = setTimeout(()=>document.getElementsByClassName("header")[0].style.top = "-4.75rem",100);
+            this.hideTitleBar = setTimeout(() => document.getElementsByClassName("header")[0].style.top = "-4.75rem", 100);
         }
         else {
-            this.hideTitleBar = setTimeout(()=>document.getElementsByClassName("header")[0].style.top = "0rem",100);
+            this.hideTitleBar = setTimeout(() => document.getElementsByClassName("header")[0].style.top = "0rem", 100);
         }
         this.oldScroll = this.scrollY;
     }
 </script>
+<script src="scramble.js"></script>
 
 </html>

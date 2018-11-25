@@ -21,6 +21,13 @@
     -webkit-transition: top 0.25s;
     font-size:0rem;
 }
+#scramble{
+    opacity:1;
+    transition: opacity 0.5s;
+}
+#scramble.hidden{
+    opacity:0;
+}
 .header div.oi::before {
     padding:1.625rem 1.5rem;
     font-size:1rem;
