@@ -134,7 +134,17 @@ h1{
     font-family:"Nunito Sans", sans-serif;
 }
 .stuffs {
-    padding:4rem 1rem;
+    padding:6rem 1rem;
     text-align:center;
     color:#555;
+}
+.grays {
+    padding:2rem 1rem;
+    text-align:left;
+    max-width:1024px;
+    margin-right:auto;
+    margin-left:auto;
+}
+.grays-container{
+    background-color:lightgray;
 }
