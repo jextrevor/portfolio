@@ -21,19 +21,19 @@
     </div>
 </div>
 <div id="menu-shade" onclick="hide()"></div>
-<div class="stuffs">
-    <h1 id="scramble">Trevor Jex</h1>
-    <p>I am a software engineer specializing in Python and JavaScript development.</p>
+<div class="stuffs-container">
+    <div class="stuffs">
+        <h1 id="scramble">Trevor Jex</h1>
+        <p>I am a software engineer specializing in Python and JavaScript development.</p>
+    </div>
 </div>
 <div class="grays-container">
     <div class="grays">
         <h1>About Me</h1>
     </div>
 </div>
-<div style="height:500rem">
-</div>
 <script>
-    window.onscroll = function (e) {
+    /*window.onscroll = function (e) {
         clearTimeout(this.hideTitleBar);
         if (this.scrollY > this.oldScroll) {
             this.hideTitleBar = setTimeout(() => document.getElementsByClassName("header")[0].style.top = "-4.75rem", 100);
@@ -42,7 +42,7 @@
             this.hideTitleBar = setTimeout(() => document.getElementsByClassName("header")[0].style.top = "0rem", 100);
         }
         this.oldScroll = this.scrollY;
-    }
+    }*/
 </script>
 <script>
     show = function () {
