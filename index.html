@@ -16,7 +16,10 @@
     </div>
     <div id="menu">
         <div class="title">
-            <h1>Trevor Jex</h1>
+            <div class="border">
+                <div class="oi" data-glyph="menu" onclick="hide()"></div>
+                <h1>Trevor Jex</h1>
+            </div>
         </div>
     </div>
 </div>
@@ -48,12 +51,12 @@
     show = function () {
         document.getElementById("menu").style.left = "0rem";
         document.getElementById("menu-shade").classList.add("visible");
-        document.body.style.overflow = "hidden";
+        document.body.style['overflow-y'] = "hidden";
     }
     hide = function () {
         document.getElementById("menu").style.left = "-12rem";
         document.getElementById("menu-shade").classList.remove("visible");
-        document.body.style.overflow = "scroll";
+        document.body.style['overflow-y'] = "scroll";
     }
 </script>
 <script src="scramble.js"></script>
