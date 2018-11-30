@@ -45,19 +45,99 @@
             this.hideTitleBar = setTimeout(() => document.getElementsByClassName("header")[0].style.top = "0rem", 100);
         }
         this.oldScroll = this.scrollY;
+
+    }
+
+    var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
+
+    function preventDefault(e) {
+        e = e || window.event;
+        if (e.preventDefault)
+            e.preventDefault();
+        e.returnValue = false;
+    }
+
+    function preventDefaultForScrollKeys(e) {
+        if (keys[e.keyCode]) {
+            preventDefault(e);
+            return false;
+        }
+    }
+
+    function disableScroll() {
+        if (window.addEventListener) // older FF
+            window.addEventListener('DOMMouseScroll', preventDefault, false);
+        window.onwheel = preventDefault; // modern standard
+        window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+        window.ontouchmove = preventDefault; // mobile
+        document.onkeydown = preventDefaultForScrollKeys;
+    }
+
+    function enableScroll() {
+        if (window.removeEventListener)
+            window.removeEventListener('DOMMouseScroll', preventDefault, false);
+        window.onmousewheel = document.onmousewheel = null;
+        window.onwheel = null;
+        window.ontouchmove = null;
+        document.onkeydown = null;
     }
 </script>
 <script>
     show = function () {
         document.getElementById("menu").style.left = "0rem";
         document.getElementById("menu-shade").classList.add("visible");
-        document.body.style['overflow-y'] = "hidden";
+        disableScrolling();
+        disableScroll();
     }
     hide = function () {
         document.getElementById("menu").style.left = "-12rem";
         document.getElementById("menu-shade").classList.remove("visible");
-        document.body.style['overflow-y'] = "scroll";
+        enableScrolling();
+        enableScroll();
     }
+    function disableScrolling() {
+        var x = window.scrollX;
+        var y = window.scrollY;
+        window.onscroll = function () { window.scrollTo(x, y); };
+    }
+
+    function enableScrolling() {
+        window.onscroll = function () {
+            clearTimeout(this.hideTitleBar);
+            if (this.scrollY > this.oldScroll) {
+                this.hideTitleBar = setTimeout(() => document.getElementsByClassName("header")[0].style.top = "-4.75rem", 100);
+            }
+            else {
+                this.hideTitleBar = setTimeout(() => document.getElementsByClassName("header")[0].style.top = "0rem", 100);
+            }
+            this.oldScroll = this.scrollY;
+        };
+    }
+    function getScrollBarWidth() {
+        var inner = document.createElement('p');
+        inner.style.width = "100%";
+        inner.style.height = "200px";
+
+        var outer = document.createElement('div');
+        outer.style.position = "absolute";
+        outer.style.top = "0px";
+        outer.style.left = "0px";
+        outer.style.visibility = "hidden";
+        outer.style.width = "200px";
+        outer.style.height = "150px";
+        outer.style.overflow = "hidden";
+        outer.appendChild(inner);
+
+        document.body.appendChild(outer);
+        var w1 = inner.offsetWidth;
+        outer.style.overflow = 'scroll';
+        var w2 = inner.offsetWidth;
+        if (w1 == w2) w2 = outer.clientWidth;
+
+        document.body.removeChild(outer);
+
+        return (w1 - w2);
+    }; 
 </script>
 <script src="scramble.js"></script>
 

@@ -17,7 +17,7 @@
     z-index:1;
     white-space: nowrap;
     color:#757575;
-    box-shadow:0px 0px 0.25rem black;
+    box-shadow:0px 0px 0.25rem gray;
     transition: top 0.25s;
     -webkit-transition: top 0.25s;
     font-size:0rem;
@@ -33,6 +33,7 @@
     color:#757575;
     transition: left 0.25s;
     -webkit-transition: left 0.25s;
+    box-shadow:0px 0px 0.5rem gray;
 }
 #menu .title {
     position:absolute;
@@ -54,31 +55,13 @@
     opacity:0;
 }
 #menu-shade.visible {
-    animation: fadeIn 0.25s linear;
     display:block;
-    opacity:1;
-}
-@keyframes fadeIn {
-    0% {
-        display: none;
-        opacity: 0;
-    }
-
-    0.001% {
-        display: block;
-        opacity: 0;
-    }
-
-    100% {
-        display: block;
-        opacity: 1;
-    }
 }
 #menu .border{
     width:100%;
     height:4.25rem;
     display:inline-block;
-    box-shadow:0 0 0.25rem black;
+    /*box-shadow:0 0 0.25rem black;*/
 }
 #scramble{
     opacity:1;
@@ -125,6 +108,7 @@ html {
 }
 body {
     height:100%;
+    width:var(--width);
     font-family: "Lato", sans-serif;
 }
 h1{
@@ -139,19 +123,85 @@ h1{
     height:100%;
 }
 .stuffs h1{
-    font-size:5.5rem;
+    font-size:20vw;
     font-weight:200;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow:hidden;
+    max-width:100%;
 }
 .stuffs p {
-    font-size:2rem;
+    font-size:7vw;
     line-height:140%;
     font-weight:200;
     font-family:"Nunito Sans", sans-serif;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+:root{
+    --thumb-color: #BBB;
+    --thumb-color-hover: #999;
+    --track-color: #eee;
+    --width: 100%;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--thumb-color);
+  border-radius: 13px;
+  
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--thumb-color-hover);
+  
+}
+::-webkit-scrollbar-thumb:active {
+  background-color: var(--thumb-color-hover);
+  
+}
+::-webkit-scrollbar-track {
+  background-color: var(--track-color);
+  border: 0px none #ffffff;
+  border-radius: 0px;
+  
+}
+::-webkit-scrollbar-track:hover {
+  background-color: var(--track-color);
+  
+}
+::-webkit-scrollbar-track:active {
+  background-color: var(--track-color);
+  
+}
+::-webkit-scrollbar-corner {
+  background-color: var(--track-color);
+  
+}
+@media (min-width:700px) {
+    .stuffs h1{
+        font-size:140px;
+        font-weight:200;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow:hidden;
+        max-width:100%;
+    }
+    .stuffs p {
+        font-size:50px;
+        line-height:140%;
+        font-weight:200;
+        font-family:"Nunito Sans", sans-serif;
+    }
 }
 .stuffs {
     padding:6rem 1rem;
     text-align:center;
     color:#555;
+    width:100%;
 }
 .grays {
     padding:2rem 1rem;
@@ -161,7 +211,13 @@ h1{
     margin-right:auto;
     margin-left:auto;
 }
+.grays h1{
+    
+        font-size:5.5rem;
+        font-weight:200;
+    
+}
 .grays-container{
-    background-color:lightgray;
+    background-color:#EEE;
     min-height:100%;
 }
