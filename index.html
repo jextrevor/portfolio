@@ -86,14 +86,16 @@
     show = function () {
         document.getElementById("menu").style.left = "0rem";
         document.getElementById("menu-shade").classList.add("visible");
-        disableScrolling();
-        disableScroll();
+        document.body.classList.add("noscroll");
+        /*disableScrolling();
+        disableScroll();*/
     }
     hide = function () {
         document.getElementById("menu").style.left = "-12.5rem";
         document.getElementById("menu-shade").classList.remove("visible");
-        enableScrolling();
-        enableScroll();
+        document.body.classList.remove("noscroll");
+        /*enableScrolling();
+        enableScroll();*/
     }
     function disableScrolling() {
         var x = window.scrollX;
