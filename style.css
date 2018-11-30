@@ -133,7 +133,7 @@ h1{
     height:100%;
 }
 .stuffs h1{
-    font-size:20vw;
+    font-size:calc(10vw + 2em);
     font-weight:200;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -141,7 +141,7 @@ h1{
     max-width:100%;
 }
 .stuffs p {
-    font-size:7vw;
+    font-size:calc(2.5vw + 0.5em);
     line-height:140%;
     font-weight:200;
     font-family:"Nunito Sans", sans-serif;
@@ -191,9 +191,9 @@ h1{
   background-color: var(--track-color);
   
 }
-@media (min-width:700px) {
+@media (min-width:900px) {
     .stuffs h1{
-        font-size:140px;
+        font-size:calc(90px + 2em);
         font-weight:200;
         white-space: nowrap;
         text-overflow: ellipsis;
@@ -201,10 +201,16 @@ h1{
         max-width:100%;
     }
     .stuffs p {
-        font-size:50px;
+        font-size:calc(23px + 0.5em);
         line-height:140%;
         font-weight:200;
         font-family:"Nunito Sans", sans-serif;
+    }
+    .header div.oi {
+        display:none;
+    }
+    .header h1{
+        padding-left:1.5rem;
     }
 }
 .stuffs {
