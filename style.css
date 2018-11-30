@@ -103,6 +103,9 @@ div.oi{
     display:inline-block;
     font-weight:600;
 }
+.title{
+    font-size:0;
+}
 html {
     height:100%;
 }
