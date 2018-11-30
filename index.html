@@ -36,13 +36,14 @@
     </div>
 </div>
 <script>
+    var hideTitleBar = 0;
     window.onscroll = function (e) {
-        clearTimeout(this.hideTitleBar);
+        clearTimeout(hideTitleBar);
         if (this.scrollY > this.oldScroll) {
-            this.hideTitleBar = setTimeout(() => document.getElementsByClassName("header")[0].style.top = "-4.75rem", 100);
+            hideTitleBar = setTimeout(() => document.getElementsByClassName("header")[0].style.top = "-4.75rem", 100);
         }
         else {
-            this.hideTitleBar = setTimeout(() => document.getElementsByClassName("header")[0].style.top = "0rem", 100);
+            hideTitleBar = setTimeout(() => document.getElementsByClassName("header")[0].style.top = "0rem", 100);
         }
         this.oldScroll = this.scrollY;
 
@@ -86,7 +87,10 @@
     show = function () {
         document.getElementById("menu").style.left = "0rem";
         document.getElementById("menu-shade").classList.add("visible");
+        temp = document.documentElement.scrollTop;
+        document.body.style.top = `-${document.documentElement.scrollTop}px`;
         document.body.classList.add("noscroll");
+        window.onscroll = function () { }
         /*disableScrolling();
         disableScroll();*/
     }
@@ -94,6 +98,18 @@
         document.getElementById("menu").style.left = "-12.5rem";
         document.getElementById("menu-shade").classList.remove("visible");
         document.body.classList.remove("noscroll");
+        document.documentElement.scrollTop = temp;
+        window.onscroll = function (e) {
+            clearTimeout(hideTitleBar);
+            if (this.scrollY > this.oldScroll) {
+                hideTitleBar = setTimeout(() => document.getElementsByClassName("header")[0].style.top = "-4.75rem", 100);
+            }
+            else {
+                hideTitleBar = setTimeout(() => document.getElementsByClassName("header")[0].style.top = "0rem", 100);
+            }
+            this.oldScroll = this.scrollY;
+
+        }
         /*enableScrolling();
         enableScroll();*/
     }
