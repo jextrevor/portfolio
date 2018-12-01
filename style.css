@@ -262,52 +262,54 @@ h1{
     font-weight:200;
     font-family:"Nunito Sans", sans-serif;
 }
-::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-}
-::-webkit-scrollbar-button {
-  width: 0px;
-  height: 0px;
-}
+
 :root{
     --thumb-color: #BBB;
     --thumb-color-hover: #999;
     --track-color: #eee;
     --width: 100%;
 }
-::-webkit-scrollbar-thumb {
-  background-color: var(--thumb-color);
-  border-radius: 13px;
-  
-}
-::-webkit-scrollbar-thumb:hover {
-  background-color: var(--thumb-color-hover);
-  
-}
-::-webkit-scrollbar-thumb:active {
-  background-color: var(--thumb-color-hover);
-  
-}
-::-webkit-scrollbar-track {
-  background-color: var(--track-color);
-  border: 0px none #ffffff;
-  border-radius: 0px;
-  
-}
-::-webkit-scrollbar-track:hover {
-  background-color: var(--track-color);
-  
-}
-::-webkit-scrollbar-track:active {
-  background-color: var(--track-color);
-  
-}
-::-webkit-scrollbar-corner {
-  background-color: var(--track-color);
-  
-}
+
 @media (min-width:900px) {
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--thumb-color);
+        border-radius: 13px;
+        
+      }
+      ::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+      }
+      ::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: var(--thumb-color-hover);
+        
+      }
+      ::-webkit-scrollbar-thumb:active {
+        background-color: var(--thumb-color-hover);
+        
+      }
+      ::-webkit-scrollbar-track {
+        background-color: var(--track-color);
+        border: 0px none #ffffff;
+        border-radius: 0px;
+        
+      }
+      ::-webkit-scrollbar-track:hover {
+        background-color: var(--track-color);
+        
+      }
+      ::-webkit-scrollbar-track:active {
+        background-color: var(--track-color);
+        
+      }
+      ::-webkit-scrollbar-corner {
+        background-color: var(--track-color);
+        
+      }
     .stuffs h1{
         font-size:calc(90px + 2em);
         font-weight:200;
