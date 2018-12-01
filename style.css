@@ -139,7 +139,6 @@ h1{
 }
 .header a {
     font-size:1rem;
-    display:inline-block;
     padding:1.625rem 0rem;
     margin:0rem 0.75rem;
     line-height:100%;
@@ -151,6 +150,7 @@ h1{
     border-bottom-style:solid;
     border-bottom-color:rgb(0, 128, 255,0);
     border-bottom-width:0px;
+    display:none;
 }
 .header a:hover{ /*, .header a:focus*/
     border-bottom-width:0.2rem;
@@ -246,6 +246,9 @@ h1{
     }
     .header h1{
         padding-left:1.5rem;
+    }
+    .header a {
+        display:inline-block;
     }
 }
 .stuffs {
