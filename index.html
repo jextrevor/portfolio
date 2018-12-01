@@ -99,7 +99,9 @@
 </script>
 <script>
     temp = 0;
+    hidetemp = 0;
     show = function () {
+        clearTimeout(hidetemp);
         document.getElementById("menu").classList.add("visible");
         document.getElementById("menu-shade").classList.add("visible");
         document.getElementById("menu-shade").classList.add("fadein");
@@ -126,7 +128,7 @@
             this.oldScroll = this.scrollY;
 
         }
-        setTimeout(()=>{document.getElementById("menu-shade").classList.remove("visible")},250);
+        hidetemp = setTimeout(()=>{document.getElementById("menu-shade").classList.remove("visible")},250);
         /*enableScrolling();
         enableScroll();*/
     }
