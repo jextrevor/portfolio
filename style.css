@@ -35,6 +35,12 @@
     -webkit-transition: left 0.25s;
     box-shadow:0px 0px 0.5rem gray;
 }
+#menu.visible{
+    left:0rem;
+}
+#menu.visible div.oi{
+    position:relative;
+}
 #menu div.overflow{
     overflow-y:auto;
     height:calc(100% - 4.25rem);
@@ -52,6 +58,56 @@
     border-bottom-style:solid;
     border-bottom-color:#DDD;
     border-bottom-width:1px;
+}
+.ripple {
+    position:relative;
+    width:12rem;
+    height:3rem;
+    padding:1rem 3rem;
+    font-size:1rem;
+    line-height: 100%;
+    overflow:hidden;
+    background-color:transparent;
+    display:inline-block;
+    box-sizing: border-box;
+    border:none;
+}
+.ripple-effect {
+    position: absolute;
+    top:50%;
+    left:50%;
+    border-radius:1000px;
+    height:0px;
+    width:0px;
+    background-color:rgba(0,128,255,0.5);
+    /* transition:height 0.25s, width 0.25s, top 0.25s, left 0.25s, opacity 0.75s;
+    opacity:1; */
+}
+.ripple:focus .ripple-effect {
+    animation:ripple 0.65s linear;
+}
+@keyframes ripple {
+    0%{
+        height:0px;
+    width:0px;
+    top:50%;
+    left:50%;
+    opacity:1;
+    }
+    40%{
+        height:200px;
+        width:200px;
+        top:calc(50% - 100px);
+        left:calc(50% - 100px);
+        opacity:1;
+    }
+    100%{
+        height:200px;
+        width:200px;
+        top:calc(50% - 100px);
+        left:calc(50% - 100px);
+        opacity:0;
+    }
 }
 #menu a:hover{ /*, #menu a:focus*/
     border-bottom-width:0.2rem;

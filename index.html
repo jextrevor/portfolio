@@ -18,7 +18,9 @@
     <div id="menu">
         <div class="title">
             <div class="border">
-                <div class="oi" data-glyph="menu" onclick="hide()"></div>
+                <div class="oi" data-glyph="menu" onclick="hide()">
+                    <div class="ripple-effect"></div>
+                </div>
                 <h1>Trevor Jex</h1>
 
 
@@ -37,6 +39,8 @@
     <div class="stuffs">
         <h1 id="scramble">Trevor Jex</h1>
         <p>I am a software engineer specializing in Python and JavaScript development.</p>
+        <button class="ripple" href="#">Test <div class="ripple-effect"></button>
+        </div>
     </div>
 </div>
 <div class="grays-container">
@@ -94,7 +98,7 @@
 </script>
 <script>
     show = function () {
-        document.getElementById("menu").style.left = "0rem";
+        document.getElementById("menu").classList.add("visible");
         document.getElementById("menu-shade").classList.add("visible");
         temp = document.documentElement.scrollTop;
         document.body.style.top = `-${document.documentElement.scrollTop}px`;
@@ -104,7 +108,7 @@
         disableScroll();*/
     }
     hide = function () {
-        document.getElementById("menu").style.left = "-12.5rem";
+        document.getElementById("menu").classList.remove("visible");
         document.getElementById("menu-shade").classList.remove("visible");
         document.body.classList.remove("noscroll");
         document.documentElement.scrollTop = temp;
