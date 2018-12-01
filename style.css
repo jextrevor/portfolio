@@ -109,7 +109,7 @@
         opacity:0;
     }
 }
-#menu a:hover{ /*, #menu a:focus*/
+#menu a:hover, #menu a:focus{ /**/
     border-bottom-width:0.2rem;
     border-bottom-color:rgb(0, 128, 255,1);
 }
@@ -228,7 +228,7 @@ h1{
     border-bottom-width:0px;
     display:none;
 }
-.header a:hover{ /*, .header a:focus*/
+.header a:hover, .header a:focus{ /**/
     border-bottom-width:0.2rem;
     border-bottom-color:rgb(0, 128, 255,1);
 }
