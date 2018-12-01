@@ -114,9 +114,6 @@
     border-bottom-width:0.2rem;
     border-bottom-color:rgb(0, 128, 255,1);
 }
-#menu a:active{
-    border-bottom-width:0.25rem;
-}
 #menu .title {
     width:100%;
     height:4.4rem;
