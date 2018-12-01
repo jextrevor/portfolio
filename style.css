@@ -135,9 +135,11 @@
     opacity:0;
     transition: opacity 0.25s;
 }
+#menu-shade.fadein {
+    opacity:1;
+}
 #menu-shade.visible {
     z-index:2;
-    opacity:1;
 }
 #menu .border{
     width:100%;

@@ -98,9 +98,11 @@
     }
 </script>
 <script>
+    temp = 0;
     show = function () {
         document.getElementById("menu").classList.add("visible");
         document.getElementById("menu-shade").classList.add("visible");
+        document.getElementById("menu-shade").classList.add("fadein");
         temp = document.documentElement.scrollTop;
         document.body.style.top = `-${document.documentElement.scrollTop}px`;
         document.body.classList.add("noscroll");
@@ -110,7 +112,7 @@
     }
     hide = function () {
         document.getElementById("menu").classList.remove("visible");
-        document.getElementById("menu-shade").classList.remove("visible");
+        document.getElementById("menu-shade").classList.remove("fadein");
         document.body.classList.remove("noscroll");
         document.documentElement.scrollTop = temp;
         window.onscroll = function (e) {
@@ -124,6 +126,7 @@
             this.oldScroll = this.scrollY;
 
         }
+        setTimeout(()=>{document.getElementById("menu-shade").classList.remove("visible")},250);
         /*enableScrolling();
         enableScroll();*/
     }
