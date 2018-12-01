@@ -22,6 +22,9 @@
     -webkit-transition: top 0.25s;
     font-size:0rem;
 }
+.header.hidden{
+    top:-4.4rem;
+}
 #menu{
     position:fixed;
     top:0rem;
