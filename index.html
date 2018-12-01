@@ -51,10 +51,10 @@
     var hideTitleBar = 0;
     window.onscroll = function (e) {
         clearTimeout(hideTitleBar);
-        if (this.scrollY >= this.oldScroll) {
+        if (this.scrollY > this.oldScroll) {
             hideTitleBar = setTimeout(() => document.getElementsByClassName("header")[0].style.top = "-4.4rem", 100);
         }
-        else {
+        else if (this.scrollY < this.oldScroll) {
             hideTitleBar = setTimeout(() => document.getElementsByClassName("header")[0].style.top = "0rem", 100);
         }
         this.oldScroll = this.scrollY;
