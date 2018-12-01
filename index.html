@@ -48,6 +48,8 @@
     </div>
 </div>
 <script>
+    
+
     var hideTitleBar = 0;
     window.onscroll = function (e) {
         clearTimeout(hideTitleBar);
@@ -125,6 +127,7 @@
         /*enableScrolling();
         enableScroll();*/
     }
+    document.getElementById("menu-shade").addEventListener("touchend", hide, false);
     function disableScrolling() {
         var x = window.scrollX;
         var y = window.scrollY;
