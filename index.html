@@ -40,7 +40,8 @@
 </div>
 <div class="grays-container">
     <div class="grays">
-        <h1>About Me</h1>
+        <h1 id="test">About Me</h1>
+        <p>insert some graphics and stuffs here.</p>
     </div>
 </div>
 <script>
@@ -56,6 +57,11 @@
         this.oldScroll = this.scrollY;
 
     }
+    window.addEventListener("scroll",function(){
+        if(this.scrollY > 500){
+            document.getElementById("test").classList.add("visible");
+        }
+    });
     window.onscroll = fancyScroll;
     let temp = 0;
     let hidetemp = 0;

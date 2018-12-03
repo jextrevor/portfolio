@@ -357,6 +357,9 @@ h1 {
         overflow: hidden;
         max-width: 100%;
     }
+    .grays h1 {
+        font-size: calc(90px + 2em);
+    }
     .stuffs p {
         font-size: calc(23px + 0.5em);
         line-height: 140%;
@@ -391,8 +394,18 @@ h1 {
 }
 
 .grays h1 {
-    font-size: 5.5rem;
+    font-size: calc(10vw + 2em);
     font-weight: 200;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 100%;
+    opacity:0;
+    transition: opacity 2s;
+}
+
+.grays h1.visible {
+    opacity:1;
 }
 
 .grays-container {
