@@ -18,12 +18,8 @@
     <div id="menu">
         <div class="title">
             <div class="border">
-                <div class="oi" data-glyph="menu" onclick="hide()">
-                    <div class="ripple-effect"></div>
-                </div>
+                <div class="oi" data-glyph="menu" onclick="hide()"></div>
                 <h1>Trevor Jex</h1>
-
-
             </div>
         </div>
         <div class="overflow">
@@ -49,7 +45,7 @@
 </div>
 <script>
     let hideTitleBar = 0;
-    const fancyScroll = function(e) {
+    const fancyScroll = function (e) {
         clearTimeout(hideTitleBar);
         if (this.scrollY > this.oldScroll) {
             hideTitleBar = setTimeout(() => document.getElementsByClassName("header")[0].classList.add("hidden"), 100);
