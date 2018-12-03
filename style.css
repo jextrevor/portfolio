@@ -230,7 +230,7 @@ h1{
     color:#757575;
     box-sizing:border-box;
     height:4.25rem;
-    transition: border-bottom-width 0.25s, border-bottom-color 0.25s, margin 0.1s, padding 0.1s;
+    transition: border-bottom-width 0.25s, border-bottom-color 0.25s, margin 0.075s, padding 0.075s;
     border-bottom-style:solid;
     border-bottom-color:rgb(0, 128, 255,0);
     border-bottom-width:0px;
