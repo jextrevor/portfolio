@@ -39,9 +39,10 @@
 </div>
 </div>
 <div class="grays-container">
-    <div class="grays">
-        <h1 id="test">About Me</h1>
-        <p>insert some graphics and stuffs here.</p>
+    <div class="grays" id="test">
+        <h1>About Me</h1>
+        <h1 id="two">Test 2</h1>
+        <h1 id="three">Test 3</h1>
     </div>
 </div>
 <script>
@@ -57,8 +58,8 @@
         this.oldScroll = this.scrollY;
 
     }
-    window.addEventListener("scroll",function(){
-        if(this.scrollY > 500){
+    window.addEventListener("scroll", function () {
+        if (document.getElementById("test").getBoundingClientRect().y < this.innerHeight) {
             document.getElementById("test").classList.add("visible");
         }
     });

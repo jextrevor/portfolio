@@ -401,10 +401,18 @@ h1 {
     overflow: hidden;
     max-width: 100%;
     opacity:0;
-    transition: opacity 2s;
+    transition: opacity 1.5s 0.5s;
 }
 
-.grays h1.visible {
+.grays h1#two {
+    transition: opacity 1.5s 0.7s;
+}
+
+.grays h1#three {
+    transition: opacity 1.5s 0.9s;
+}
+
+.grays.visible h1 {
     opacity:1;
 }
 
