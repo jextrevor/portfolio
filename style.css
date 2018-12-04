@@ -23,6 +23,7 @@
     transition: top 0.25s;
     -webkit-transition: top 0.25s;
     font-size: 0rem;
+    animation: test 1.5s;
 }
 
 .header.hidden {
@@ -316,6 +317,17 @@ h1 {
     --width: 100%;
 }
 
+.grays h1 {
+    font-size: calc(10vw + 2em);
+    font-weight: 200;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 100%;
+    opacity:0;
+    transition: opacity 1.5s 0.5s;
+}
+
 @media (min-width:900px) {
     ::-webkit-scrollbar-thumb {
         background-color: var(--thumb-color);
@@ -397,21 +409,11 @@ h1 {
     padding: 2rem 1rem;
     text-align: center;
     max-width: 1024px;
-    min-height: 100%;
     margin-right: auto;
     margin-left: auto;
 }
 
-.grays h1 {
-    font-size: calc(10vw + 2em);
-    font-weight: 200;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    max-width: 100%;
-    opacity:0;
-    transition: opacity 1.5s 0.5s;
-}
+
 
 .grays h1#two {
     transition: opacity 1.5s 0.7s;
@@ -427,6 +429,5 @@ h1 {
 
 .grays-container {
     background-color: rgba(0, 128, 255);
-    min-height: 100%;
     color: white;
 }
