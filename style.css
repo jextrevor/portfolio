@@ -23,7 +23,6 @@
     transition: top 0.25s;
     -webkit-transition: top 0.25s;
     font-size: 0rem;
-    animation: test 1.5s;
 }
 
 .header.hidden {
@@ -67,7 +66,7 @@
     box-sizing: border-box;
     height: 4.25rem;
     display: block;
-    transition: border-bottom-width 0.15s, border-bottom-color 0.15s, margin 0.1s, padding 0.1s;
+    transition: border-bottom-width 0.075s, border-bottom-color 0.075s;
     border-bottom-style: solid;
     border-bottom-color: #DDD;
     border-bottom-width: 1px;
@@ -390,7 +389,7 @@ h1 {
 }
 
 .stuffs {
-    animation: test 1.5s;
+    animation: test 1.25s;
     padding: 6rem 1rem;
     text-align: center;
     color: #555;
