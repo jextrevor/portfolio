@@ -378,10 +378,19 @@ h1 {
 }
 
 .stuffs {
+    animation: test 1.5s;
     padding: 6rem 1rem;
     text-align: center;
     color: #555;
     width: 100%;
+}
+@keyframes test{
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
 }
 
 .grays {
