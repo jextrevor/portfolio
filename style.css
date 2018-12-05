@@ -94,18 +94,19 @@
     height: 20%;
     width: 20%;
     background-color: #EEE;
-    transition:height 0.75s, width 0.75s, top 0.75s, left 0.75s, border-radius 0.75s;
-    opacity:1;
-    z-index:4;
+    transition: height 0.75s, width 0.75s, top 0.75s, left 0.75s, border-radius 0.75s;
+    opacity: 1;
+    z-index: 4;
 }
 
 div:hover .ripple-effect {
-    border-radius: 100vmax;
-    height: 100vmax;
-        width: 100vmax;
-        top: calc(50% - 50vmax);
-        left: calc(50% - 50vmax);
+    border-radius: 142vmax;
+    height: 142vmax;
+    width: 142vmax;
+    top: calc(50% - 71vmax);
+    left: calc(50% - 71vmax);
 }
+
 .menu-shade {
     position: fixed;
     top: 0;
@@ -116,7 +117,7 @@ div:hover .ripple-effect {
     display: block;
     opacity: 0;
     transition: opacity 0.75s;
-    z-index:3;
+    z-index: 3;
 }
 
 div:hover .menu-shade {
@@ -183,14 +184,14 @@ div:hover .menu-shade {
 }
 
 #modal-container {
-    position:fixed;
-    top:10%;
-    right:10%;
-    left:10%;
-    bottom:10%;
-    overflow:hidden;
-    background-color:transparent;
-    z-index:10;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    background-color: transparent;
+    z-index: 10;
 }
 
 #menu-shade {
@@ -372,7 +373,7 @@ h1 {
     text-overflow: ellipsis;
     overflow: hidden;
     max-width: 100%;
-    opacity:0;
+    opacity: 0;
     transition: opacity 1.5s 0.5s;
 }
 
@@ -444,12 +445,13 @@ h1 {
     color: #555;
     width: 100%;
 }
-@keyframes test{
+
+@keyframes test {
     0% {
-        opacity:0;
+        opacity: 0;
     }
     100% {
-        opacity:1;
+        opacity: 1;
     }
 }
 
@@ -461,8 +463,6 @@ h1 {
     margin-left: auto;
 }
 
-
-
 .grays h1#two {
     transition: opacity 1.5s 0.7s;
 }
@@ -472,7 +472,7 @@ h1 {
 }
 
 .grays.visible h1 {
-    opacity:1;
+    opacity: 1;
 }
 
 .grays-container {
