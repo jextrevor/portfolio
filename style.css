@@ -493,6 +493,12 @@ div.about {
 }
 div.about img {
     width:50%;
+    display:inline-block;
+}
+div.about div {
+    width:50%;
+    background-color:#EEE;
+    float:right;
 }
 
 .images {
