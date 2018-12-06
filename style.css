@@ -169,7 +169,7 @@ div:hover .menu-shade {
 #menu a:focus {
     /**/
     border-bottom-width: 0.2rem;
-    border-bottom-color: rgb(0, 128, 255, 1);
+    border-bottom-color: #36B2FF;
 }
 
 #menu .title {
@@ -327,7 +327,7 @@ h1 {
 .header a:focus {
     /**/
     border-bottom-width: 0.2rem;
-    border-bottom-color: rgb(0, 128, 255, 1);
+    border-bottom-color: #36B2FF;
 }
 
 .header a:active {
@@ -463,19 +463,50 @@ h1 {
     margin-left: auto;
 }
 
-.grays h1#two {
+.grays #two {
     transition: opacity 1.5s 0.7s;
 }
 
-.grays h1#three {
+.grays #three {
     transition: opacity 1.5s 0.9s;
 }
+div#two, div#three {
+    opacity:0;
+}
+.grays p {
+    font-size:1.5rem;
+    font-weight:300;
+}
 
-.grays.visible h1 {
-    opacity: 1;
+.grays.visible h1, .grays.visible div {
+    opacity: 1!important;
 }
 
 .grays-container {
-    background-color: rgba(0, 128, 255);
-    color: white;
+    background-color: #EEE;
+    color: #555;
+}
+
+div.about {
+    width: 100%;
+    overflow-x:hidden;
+}
+div.about img {
+    width:50%;
+    display:inline-block;
+}
+div.about div {
+    width:50%;
+    background-color:#EEE;
+    float:right;
+}
+
+.images {
+    display:inline-block;
+    border-radius: 30rem;
+    height:30rem;
+    width:30rem;
+    border:1rem solid #36B2FF;
+    background-color: #D0D0D0;
+    margin:2rem 0rem;
 }
