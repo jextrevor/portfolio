@@ -16,7 +16,7 @@
     right: 0;
     background: white;
     overflow: hidden;
-    z-index: 1;
+    z-index: 100;
     white-space: nowrap;
     color: #757575;
     box-shadow: 0px 0px 0.15rem gray;
@@ -36,7 +36,7 @@
     bottom: 0rem;
     width: 12rem;
     background: white;
-    z-index: 3;
+    z-index: 300;
     color: #757575;
     transition: left 0.25s;
     -webkit-transition: left 0.25s;
@@ -379,99 +379,7 @@ h1 {
     transition: opacity 1.5s 0.5s;
 }
 
-@media (min-width:900px) {
-    ::-webkit-scrollbar-thumb {
-        background-color: var(--thumb-color);
-        border-radius: 13px;
-    }
-    ::-webkit-scrollbar {
-        width: 5px;
-        height: 5px;
-    }
-    ::-webkit-scrollbar-button {
-        width: 0px;
-        height: 0px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-        background-color: var(--thumb-color-hover);
-    }
-    ::-webkit-scrollbar-thumb:active {
-        background-color: var(--thumb-color-hover);
-    }
-    ::-webkit-scrollbar-track {
-        background-color: var(--track-color);
-        border: 0px none #ffffff;
-        border-radius: 0px;
-    }
-    ::-webkit-scrollbar-track:hover {
-        background-color: var(--track-color);
-    }
-    ::-webkit-scrollbar-track:active {
-        background-color: var(--track-color);
-    }
-    ::-webkit-scrollbar-corner {
-        background-color: var(--track-color);
-    }
-    .stuffs h1 {
-        font-size: calc(90px + 2em);
-        font-weight: 200;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 100%;
-    }
-    .grays h1 {
-        font-size: calc(90px + 2rem);
-    }
-    div.aboutme h1 {
-        font-size: calc(90px  - 18px + 2rem) !important;
-    }
-    .stuffs p {
-        font-size: calc(23px + 0.5em);
-        line-height: 140%;
-        font-weight: 200;
-        font-family: "Nunito Sans", sans-serif;
-    }
-    div.aboutme p {
-        font-size: calc(23px + 0.5em);
-        line-height: 140%;
-        font-weight: 200;
-        font-family: "Nunito Sans", sans-serif;
-    }
-    .header div.oi {
-        display: none;
-    }
-    .header h1 {
-        padding-left: 1.5rem;
-    }
-    .header a {
-        display: inline-block;
-    }
 
-    div.about img {
-        width: 50%!important;
-        display: block;
-        float: left;
-    }
-    
-    div.about div.aboutme {
-        width: 50%!important;
-        float: right;
-        padding: 1rem;
-    }
-    .yourmom {
-        display:block;
-        position:absolute;
-        width:100%;
-        height:300%;
-        left:50%;
-        top:-50%;
-        background-color:#EEE;
-        transform:rotate(-15deg);
-        z-index:0;
-        box-shadow: 0px 0px 10rem black;
-    }
-}
 .stuffs {
     animation: test 1.25s;
     padding: 6rem 1rem;
@@ -547,7 +455,7 @@ div.about div.aboutme {
 }
 
 div.aboutme h1 {
-    font-size: calc(8vw + 2rem);
+    font-size: calc(5vw + 2rem);
     font-weight: 200;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -556,7 +464,7 @@ div.aboutme h1 {
 }
 
 div.aboutme p {
-    font-size: calc(23px + 0.5em);
+    font-size: calc(2.5vw + 0.5rem);
     line-height: 140%;
     font-weight: 200;
     font-family: "Nunito Sans", sans-serif;
@@ -582,4 +490,116 @@ div.aboutme p {
     line-height: 200%;
     color: #AAA;
     font-weight: 300;
+}
+
+@media (min-width:900px) {
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--thumb-color);
+        border-radius: 13px;
+    }
+    ::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+    ::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: var(--thumb-color-hover);
+    }
+    ::-webkit-scrollbar-thumb:active {
+        background-color: var(--thumb-color-hover);
+    }
+    ::-webkit-scrollbar-track {
+        background-color: var(--track-color);
+        border: 0px none #ffffff;
+        border-radius: 0px;
+    }
+    ::-webkit-scrollbar-track:hover {
+        background-color: var(--track-color);
+    }
+    ::-webkit-scrollbar-track:active {
+        background-color: var(--track-color);
+    }
+    ::-webkit-scrollbar-corner {
+        background-color: var(--track-color);
+    }
+    .stuffs h1 {
+        font-size: calc(90px + 2em);
+        font-weight: 200;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 100%;
+    }
+    .grays h1 {
+        font-size: calc(90px + 2rem);
+    }
+    div.aboutme h1 {
+        font-size: calc(45px + 2rem) !important;
+    }
+    .stuffs p {
+        font-size: calc(23px + 0.5em);
+        line-height: 140%;
+        font-weight: 200;
+        font-family: "Nunito Sans", sans-serif;
+    }
+    div.aboutme p {
+        font-size: calc(23px + 0.5em);
+        line-height: 140%;
+        font-weight: 200;
+        font-family: "Nunito Sans", sans-serif;
+    }
+    .header div.oi {
+        display: none;
+    }
+    .header h1 {
+        padding-left: 1.5rem;
+    }
+    .header a {
+        display: inline-block;
+    }
+
+    div.about img {
+        display: block;
+        float: left;
+        width:100%;
+        position:relative;
+        left:0%;
+        transition: left 2s;
+        z-index:0;
+    }
+    
+    div.about div.aboutme {
+        width: 45%!important;
+        float: right;
+        padding: 1rem;
+        left:125%;
+        transition: left 2s;
+        position:absolute;
+        z-index:1;
+    }
+    .yourmom {
+        display:block;
+        position:absolute;
+        width:100%;
+        height:300%;
+        left:125%;
+        top:-50%;
+        background-color:#EEE;
+        transform:rotate(-15deg);
+        z-index:1;
+        box-shadow: 0px 0px 10rem black;
+        transition:left 2s;
+    }
+    div.about.visible .yourmom {
+        left:55%;
+    }
+    div.about.visible .aboutme{
+        left:55%;
+    }
+    div.about.visible img {
+        left:-23%;
+    }
 }

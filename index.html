@@ -62,7 +62,7 @@
         <h1>About Me</h1>
         <p>That's cool</p>
     </div>
-    <img src="trevor2.jpg" alt="" />
+    <img src="trevor.jpg" alt="" />
 </div>
 <p class="footer">Copyright &copy; 2018. Built and designed by Trevor Jex. All rights reserved.</p>
 <script>
@@ -79,8 +79,8 @@
 
     }
     window.addEventListener("scroll", function () {
-        if (document.getElementById("test").getBoundingClientRect().y < this.innerHeight) {
-            document.getElementById("test").classList.add("visible");
+        if (document.getElementsByClassName("about")[0].getBoundingClientRect().y < this.innerHeight) {
+            document.getElementsByClassName("about")[0].classList.add("visible");
         }
     });
     window.onscroll = fancyScroll;
