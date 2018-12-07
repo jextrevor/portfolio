@@ -419,9 +419,18 @@ h1 {
         max-width: 100%;
     }
     .grays h1 {
-        font-size: calc(90px + 2em);
+        font-size: calc(90px + 2rem);
+    }
+    div.aboutme h1 {
+        font-size: calc(90px  - 18px + 2rem) !important;
     }
     .stuffs p {
+        font-size: calc(23px + 0.5em);
+        line-height: 140%;
+        font-weight: 200;
+        font-family: "Nunito Sans", sans-serif;
+    }
+    div.aboutme p {
         font-size: calc(23px + 0.5em);
         line-height: 140%;
         font-weight: 200;
@@ -436,6 +445,19 @@ h1 {
     .header a {
         display: inline-block;
     }
+
+    div.about img {
+        width: 50%!important;
+        display: block;
+        float: left;
+    }
+    
+    div.about div.aboutme {
+        width: 50%!important;
+        float: right;
+        padding: 1rem;
+    }
+
 }
 
 .stuffs {
@@ -470,16 +492,20 @@ h1 {
 .grays #three {
     transition: opacity 1.5s 0.9s;
 }
-div#two, div#three {
-    opacity:0;
-}
-.grays p {
-    font-size:1.5rem;
-    font-weight:300;
+
+div#two,
+div#three {
+    opacity: 0;
 }
 
-.grays.visible h1, .grays.visible div {
-    opacity: 1!important;
+.grays p {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.grays.visible h1,
+.grays.visible div {
+    opacity: 1 !important;
 }
 
 .grays-container {
@@ -489,24 +515,56 @@ div#two, div#three {
 
 div.about {
     width: 100%;
-    overflow-x:hidden;
+    overflow-x: hidden;
+    background-color: #EEE;
 }
+
 div.about img {
-    width:50%;
-    display:inline-block;
+    width: 100%;
+    display: block;
+    float: left;
 }
-div.about div {
-    width:50%;
-    background-color:#EEE;
-    float:right;
+
+div.about div.aboutme {
+    width: 100%;
+    float: right;
+    padding: 1rem;
+}
+
+div.aboutme h1 {
+    font-size: calc(8vw + 2rem);
+    font-weight: 200;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+div.aboutme p {
+    font-size: calc(23px + 0.5em);
+    line-height: 140%;
+    font-weight: 200;
+    font-family: "Nunito Sans", sans-serif;
+    padding-left:2rem;
 }
 
 .images {
-    display:inline-block;
+    display: inline-block;
     border-radius: 30rem;
-    height:30rem;
-    width:30rem;
-    border:1rem solid #36B2FF;
+    height: 30rem;
+    width: 30rem;
+    border: 1rem solid #36B2FF;
     background-color: #D0D0D0;
-    margin:2rem 0rem;
+    margin: 2rem 0rem;
+}
+
+.footer {
+    width: 100%;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    background-color: #EEE;
+    line-height: 200%;
+    color: #AAA;
+    font-weight: 300;
 }
