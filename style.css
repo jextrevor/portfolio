@@ -442,10 +442,14 @@ div.about {
     position: relative;
 }
 
-div.about img.largerimage {
+div.about img.smallerimage {
     width: 100%;
     display: block;
     float: left;
+}
+
+div.about img.largerimage {
+    display:none;
 }
 
 div.about div.aboutme {
@@ -494,18 +498,14 @@ div.aboutme p {
     font-size:calc(1.5vw + 5px);
 }
 
-.about img.largerimage {
-    display: none;
-}
-
 @media (min-width:900px) {
     .footer {
         font-size: 18.5px;
     }
-    .largerimage {
+    div.about img.largerimage {
         display: inline-block;
     }
-    .smallerimage {
+    div.about img.smallerimage {
         display: none;
     }
     ::-webkit-scrollbar-thumb {
