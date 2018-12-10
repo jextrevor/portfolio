@@ -449,7 +449,7 @@ div.about img.smallerimage {
 }
 
 div.about img.largerimage {
-    display:none;
+    display: none;
 }
 
 div.about div.aboutme {
@@ -473,7 +473,6 @@ div.aboutme p {
     line-height: 140%;
     font-weight: 200;
     font-family: "Nunito Sans", sans-serif;
-    padding-left: 2rem;
 }
 
 .images {
@@ -495,10 +494,13 @@ div.aboutme p {
     line-height: 200%;
     color: #AAA;
     font-weight: 300;
-    font-size:calc(1.5vw + 5px);
+    font-size: calc(1.5vw + 5px);
 }
 
 @media (min-width:900px) {
+    div.aboutme p {
+        padding-left: 2rem;
+    }
     .footer {
         font-size: 18.5px;
     }
