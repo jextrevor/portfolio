@@ -351,9 +351,11 @@ h1 {
     overflow: hidden;
     max-width: 100%;
 }
+
 .yourmom {
-    display:none;
+    display: none;
 }
+
 .stuffs p {
     font-size: calc(2.5vw + 0.5em);
     line-height: 140%;
@@ -378,7 +380,6 @@ h1 {
     opacity: 0;
     transition: opacity 1.5s 0.5s;
 }
-
 
 .stuffs {
     animation: test 1.25s;
@@ -435,12 +436,11 @@ div#three {
 
 div.about {
     width: 100%;
-    max-height:100%;
+    max-height: 100%;
     overflow: hidden;
     background-color: #EEE;
-    position:relative;
+    position: relative;
 }
-
 
 div.about img {
     width: 100%;
@@ -452,7 +452,7 @@ div.about div.aboutme {
     width: 100%;
     float: right;
     padding: 1rem;
-    position:relative;
+    position: relative;
 }
 
 div.aboutme h1 {
@@ -469,7 +469,7 @@ div.aboutme p {
     line-height: 140%;
     font-weight: 200;
     font-family: "Nunito Sans", sans-serif;
-    padding-left:2rem;
+    padding-left: 2rem;
 }
 
 .images {
@@ -491,9 +491,23 @@ div.aboutme p {
     line-height: 200%;
     color: #AAA;
     font-weight: 300;
+    font-size:calc(1.5vw + 5px);
+}
+
+.about img.largerimage {
+    display: none;
 }
 
 @media (min-width:900px) {
+    .footer {
+        font-size: 18.5px;
+    }
+    .largerimage {
+        display: inline-block;
+    }
+    .smallerimage {
+        display: none;
+    }
     ::-webkit-scrollbar-thumb {
         background-color: var(--thumb-color);
         border-radius: 13px;
@@ -561,46 +575,44 @@ div.aboutme p {
     .header a {
         display: inline-block;
     }
-
     div.about img {
         display: block;
         float: left;
-        width:100%;
-        position:relative;
-        left:0%;
+        width: 100%;
+        position: relative;
+        left: 0%;
         transition: left 2s;
-        z-index:0;
+        z-index: 0;
     }
-    
     div.about div.aboutme {
-        width: 45%!important;
+        width: 45% !important;
         float: right;
         padding: 1rem;
-        left:125%;
+        left: 125%;
         transition: left 2s;
-        position:absolute;
-        z-index:1;
+        position: absolute;
+        z-index: 1;
     }
     .yourmom {
-        display:block;
-        position:absolute;
-        width:100%;
-        height:300%;
-        left:125%;
-        top:-50%;
-        background-color:#EEE;
-        transform:rotate(-15deg);
-        z-index:1;
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 300%;
+        left: 125%;
+        top: -50%;
+        background-color: #EEE;
+        transform: rotate(-15deg);
+        z-index: 1;
         box-shadow: 0px 0px 10rem black;
-        transition:left 2s;
+        transition: left 2s;
     }
     div.about.visible .yourmom {
-        left:55%;
+        left: 55%;
     }
-    div.about.visible .aboutme{
-        left:55%;
+    div.about.visible .aboutme {
+        left: 55%;
     }
     div.about.visible img {
-        left:-23%;
+        left: -23%;
     }
 }
