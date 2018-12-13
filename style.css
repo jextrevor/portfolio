@@ -595,6 +595,8 @@ div.aboutme p {
         transition: left 2s 0.25s;
         position: absolute;
         z-index: 1;
+        overflow:auto;
+        height:100%;
     }
     .yourmom {
         display: block;
