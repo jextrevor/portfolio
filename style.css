@@ -469,7 +469,7 @@ div.aboutme h1 {
 }
 
 div.aboutme p {
-    font-size: calc(2.25vw + 0.25rem);
+    font-size: calc(2.25vw);
     line-height: 140%;
     font-weight: 200;
     font-family: "Nunito Sans", sans-serif;
@@ -563,7 +563,7 @@ div.aboutme p {
         font-family: "Nunito Sans", sans-serif;
     }
     div.aboutme p {
-        font-size: calc(21px + 0.25em);
+        font-size: calc(21px);
         line-height: 140%;
         font-weight: 200;
         font-family: "Nunito Sans", sans-serif;
