@@ -457,7 +457,6 @@ div.about div.aboutme {
     float: right;
     padding: 1rem;
     position: relative;
-    overflow-y:auto;
 }
 
 div.aboutme h1 {
@@ -595,8 +594,10 @@ div.aboutme p {
         transition: left 2s 0.25s;
         position: absolute;
         z-index: 1;
-        overflow:auto;
-        height:100%;
+        max-height: 100%;
+    }
+    div.about div.aboutme div.scroll {
+        overflow: auto;
     }
     .yourmom {
         display: block;
