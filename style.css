@@ -457,6 +457,7 @@ div.about div.aboutme {
     float: right;
     padding: 1rem;
     position: relative;
+    overflow-y:auto;
 }
 
 div.aboutme h1 {
