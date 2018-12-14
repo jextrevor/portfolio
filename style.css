@@ -567,6 +567,22 @@ div.aboutme p {
         line-height: 140%;
         font-weight: 200;
         font-family: "Nunito Sans", sans-serif;
+        opacity:0;
+    }
+    div.aboutme p.one{
+        transition: opacity 0.75s 1.5s;
+    }
+    div.aboutme p.two{
+        transition: opacity 0.75s 1.75s;
+    }
+    div.aboutme p.three{
+        transition: opacity 0.75s 2s;
+    }
+    div.aboutme p.four{
+        transition: opacity 0.75s 2.25s;
+    }
+    div.about.visible div.aboutme p{
+        opacity:1;
     }
     .header div.oi {
         display: none;
