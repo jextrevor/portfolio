@@ -117,16 +117,16 @@
         stopScrolling();
     }
     const stopScrolling = function () {
-        temp = el.scrollTop;
+        /*temp = el.scrollTop;
         document.body.style.top = `-${temp}px`;
         document.body.classList.add("noscroll");
-        window.onscroll = function () { }
+        window.onscroll = function () { }*/
     }
     const resumeScrolling = function () {
-        document.body.classList.remove("noscroll");
+        /*document.body.classList.remove("noscroll");
         document.body.style = "";
         el.scrollTop = temp;
-        window.onscroll = fancyScroll;
+        window.onscroll = fancyScroll;*/
     }
     const hidecontact = function () {
         document.documentElement.style.setProperty("--required-width", Math.sqrt(window.innerHeight * window.innerHeight + window.innerWidth * window.innerWidth) + "px");
