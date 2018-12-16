@@ -256,7 +256,7 @@
     right: 0;
     bottom: 0;
     z-index: -10;
-    background-color: rgba(0.5, 0.5, 0.5, 0.5);
+    background-color: #deadde;
     display: block;
     opacity: 0;
     transition: opacity 0.25s;
@@ -264,12 +264,10 @@
 
 #menu-shade.fadein {
     opacity: 1;
-    z-index: 100000000;
 }
 
 #menu-shade.visible {
-    z-index: 100000000;
-    opacity: 1;
+    z-index: 500;
 }
 
 #menu .border {
