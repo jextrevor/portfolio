@@ -14,7 +14,7 @@
         <a href="https://github.com/jextrevor" target="_blank">GitHub</a>
         <a href="https://stackoverflow.com/users/1997993/trevor-jex" target="_blank">Stack Overflow</a>
         <a href="/resume.pdf" target="_blank">Resume</a>
-        <a href="#" onclick="event.preventDefault();">Contact</a>
+        <a href="#" onclick="contact()">Contact</a>
     </div>
     <div id="menu">
         <div class="title">
@@ -27,7 +27,7 @@
             <a href="https://github.com/jextrevor" target="_blank">GitHub</a>
             <a href="https://stackoverflow.com/users/1997993/trevor-jex" target="_blank">Stack Overflow</a>
             <a href="/resume.pdf" target="_blank">Resume</a>
-            <a href="#" onclick="hide()">Contact</a>
+            <a href="#" onclick="hide();contact();">Contact</a>
         </div>
     </div>
 </div>
@@ -57,6 +57,17 @@
         <div class="images"></div>
     </div>
 </div> -->
+<div id="contact">
+    <div class="ripple-effect" onclick="hidecontact()"></div>
+    <div id="contact-info" onclick="hidecontact()">
+        <div>
+            <h1>Contact Me</h1>
+            <p>Feel free to reach out to me through phone or email.</p>
+            <p>Phone: <a href="sms:8018221805">801-822-1805</a></p>
+            <p>Email: <a href="mailto:jextrevor@gmail.com">jextrevor@gmail.com</a></p>
+        </div>
+    </div>
+</div>
 <div class="about">
     <div class="yourmom"></div>
     <div class="aboutme">
@@ -76,6 +87,7 @@
 <p class="footer">Copyright &copy; 2018. Built and designed by Trevor Jex. All rights reserved.</p>
 <script>
     let hideTitleBar = 0;
+    let contactshow = 0;
     const fancyScroll = function (e) {
         clearTimeout(hideTitleBar);
         if (this.scrollY > this.oldScroll) {
@@ -92,6 +104,39 @@
             document.getElementsByClassName("about")[0].classList.add("visible");
         }
     });
+    const contact = function () {
+        document.documentElement.style.setProperty("--required-width", Math.sqrt(window.innerHeight * window.innerHeight + window.innerWidth * window.innerWidth) + "px");
+        contactshow = setTimeout(() => {
+            document.getElementById("contact-info").classList.add("visible");
+        }, 750);
+        document.getElementById("contact").classList.add("visible");
+        temp = document.documentElement.scrollTop;
+        document.body.style.top = `-${document.documentElement.scrollTop}px`;
+        document.body.classList.add("noscroll");
+        window.onscroll = function () { }
+
+    }
+    const hidecontact = function () {
+
+        document.documentElement.style.setProperty("--required-width", Math.sqrt(window.innerHeight * window.innerHeight + window.innerWidth * window.innerWidth) + "px");
+        clearTimeout(contactshow);
+        document.getElementById("contact-info").classList.remove("visible");
+        document.getElementById("contact").classList.remove('visible');
+        document.body.classList.remove("noscroll");
+        document.body.style = "";
+        document.documentElement.scrollTop = temp;
+        window.onscroll = function (e) {
+            clearTimeout(hideTitleBar);
+            if (this.scrollY > this.oldScroll) {
+                hideTitleBar = setTimeout(() => document.getElementsByClassName("header")[0].style.top = "-4.75rem", 100);
+            }
+            else {
+                hideTitleBar = setTimeout(() => document.getElementsByClassName("header")[0].style.top = "0rem", 100);
+            }
+            this.oldScroll = this.scrollY;
+
+        }
+    }
     window.onscroll = fancyScroll;
     let temp = 0;
     let hidetemp = 0;

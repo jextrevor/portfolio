@@ -36,7 +36,7 @@
     bottom: 0rem;
     width: 12rem;
     background: white;
-    z-index: 300;
+    z-index: 600;
     color: #757575;
     transition: left 0.25s;
     -webkit-transition: left 0.25s;
@@ -86,25 +86,47 @@
     border: none;
 }
 
-.ripple-effect {
-    position: absolute;
-    top: 40%;
-    left: 40%;
-    border-radius: 0px;
-    height: 20%;
-    width: 20%;
-    background-color:  #f8f8f8;
-    transition: height 0.75s, width 0.75s, top 0.75s, left 0.75s, border-radius 0.75s;
-    opacity: 1;
-    z-index: 4;
+#contact-info {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -10;
+    display: flex;
+    background-color: #f8f8f8;
+    transition: opacity 0.25s;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
 }
 
-div:hover .ripple-effect {
-    border-radius: 142vmax;
-    height: 142vmax;
-    width: 142vmax;
-    top: calc(50% - 71vmax);
-    left: calc(50% - 71vmax);
+
+#contact-info.visible {
+    opacity: 1;
+    z-index: 901;
+}
+
+.ripple-effect {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border-radius: 0px;
+    height: 0%;
+    width: 0%;
+    background-color: #f8f8f8;
+    transition: height 0.75s, width 0.75s, top 0.75s, left 0.75s, border-radius 0.75s;
+    opacity: 1;
+    z-index: 900;
+    box-shadow: 0px 0px 5rem gray;
+}
+
+#contact.visible .ripple-effect {
+    border-radius: var(--required-width);
+    height: var(--required-width);
+    width: var(--required-width);
+    top: calc(50% - calc(var(--required-width)/2));
+    left: calc(50% - calc(var(--required-width)/2));
 }
 
 .menu-shade {
@@ -120,7 +142,7 @@ div:hover .ripple-effect {
     z-index: 3;
 }
 
-div:hover .menu-shade {
+.menu-shade {
     opacity: 1;
 }
 
@@ -192,6 +214,7 @@ div:hover .menu-shade {
     overflow: hidden;
     background-color: transparent;
     z-index: 10;
+    display: block;
 }
 
 #menu-shade {
@@ -212,7 +235,7 @@ div:hover .menu-shade {
 }
 
 #menu-shade.visible {
-    z-index: 2;
+    z-index: 500;
 }
 
 #menu .border {
@@ -366,8 +389,9 @@ h1 {
 :root {
     --thumb-color: #BBB;
     --thumb-color-hover: #999;
-    --track-color:  #f8f8f8;
+    --track-color: #f8f8f8;
     --width: 100%;
+    --required-width: 142vmax;
 }
 
 .grays h1 {
@@ -430,15 +454,15 @@ div#three {
 }
 
 .grays-container {
-    background-color:  #f8f8f8;
+    background-color: #f8f8f8;
     color: #555;
 }
 
 div.about {
     width: 100%;
     overflow: hidden;
-    max-height:90%;
-    background-color:  #f8f8f8;
+    max-height: 90%;
+    background-color: #f8f8f8;
     position: relative;
 }
 
@@ -490,7 +514,7 @@ div.aboutme p {
     overflow-x: hidden;
     text-overflow: ellipsis;
     text-align: center;
-    background-color:  #f8f8f8;
+    background-color: #f8f8f8;
     line-height: 200%;
     color: #AAA;
     font-weight: 300;
@@ -567,22 +591,22 @@ div.aboutme p {
         line-height: 140%;
         font-weight: 200;
         font-family: "Nunito Sans", sans-serif;
-        opacity:0;
+        opacity: 0;
     }
-    div.aboutme p.one{
+    div.aboutme p.one {
         transition: opacity 0.75s 1.5s;
     }
-    div.aboutme p.two{
+    div.aboutme p.two {
         transition: opacity 0.75s 1.75s;
     }
-    div.aboutme p.three{
+    div.aboutme p.three {
         transition: opacity 0.75s 2s;
     }
-    div.aboutme p.four{
+    div.aboutme p.four {
         transition: opacity 0.75s 2.25s;
     }
-    div.about.visible div.aboutme p{
-        opacity:1;
+    div.about.visible div.aboutme p {
+        opacity: 1;
     }
     .header div.oi {
         display: none;
@@ -596,8 +620,8 @@ div.aboutme p {
     div.about img {
         display: block;
         float: left;
-        width:100%;
-        max-height:100%;
+        width: 100%;
+        max-height: 100%;
         position: relative;
         left: 0%;
         transition: left 2s 0.25s;
@@ -612,7 +636,7 @@ div.aboutme p {
         position: absolute;
         z-index: 1;
         height: 100%;
-        background-color:#f8f8f8;
+        background-color: #f8f8f8;
     }
     .yourmom {
         display: block;
