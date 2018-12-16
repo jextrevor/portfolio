@@ -90,6 +90,7 @@
 <script>
     let hideTitleBar = 0;
     let contactshow = 0;
+    let temp = 0;
     const el = document.scrollingElement || document.documentElement;
     const fancyScroll = function (e) {
         clearTimeout(hideTitleBar);
@@ -135,7 +136,6 @@
         resumeScrolling();
     }
     window.onscroll = fancyScroll;
-    let temp = 0;
     let hidetemp = 0;
     show = function () {
         clearTimeout(hidetemp);
