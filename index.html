@@ -121,8 +121,7 @@
         document.body.style.top = `-${temp}px`;
         document.body.classList.add("noscroll");
         window.onscroll = function () { }
-        window.scrollBy(-1);
-        window.scrollBy(1);
+        window.scrollBy(100);
     }
     const resumeScrolling = function () {
         document.body.classList.remove("noscroll");
