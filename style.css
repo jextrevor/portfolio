@@ -256,14 +256,14 @@
     right: 0;
     bottom: 0;
     z-index: -10;
-    background-color: #deadde;
+    background-color: #808080;
     display: block;
     opacity: 0;
     transition: opacity 0.25s;
 }
 
 #menu-shade.fadein {
-    opacity: 1;
+    opacity: 0.5;
 }
 
 #menu-shade.visible {
