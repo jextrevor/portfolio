@@ -95,7 +95,7 @@
     z-index: -10;
     display: flex;
     background-color: #f8f8f8;
-    transition: opacity 0.25s;
+    transition: opacity 0.35s;
     opacity: 0;
     align-items: center;
     justify-content: center;
