@@ -128,17 +128,7 @@
         document.body.classList.remove("noscroll");
         document.body.style = "";
         document.documentElement.scrollTop = temp;
-        window.onscroll = function (e) {
-            clearTimeout(hideTitleBar);
-            if (this.scrollY > this.oldScroll) {
-                hideTitleBar = setTimeout(() => document.getElementsByClassName("header")[0].style.top = "-4.75rem", 100);
-            }
-            else {
-                hideTitleBar = setTimeout(() => document.getElementsByClassName("header")[0].style.top = "0rem", 100);
-            }
-            this.oldScroll = this.scrollY;
-
-        }
+        window.onscroll = fancyScroll;
     }
     window.onscroll = fancyScroll;
     let temp = 0;
@@ -159,17 +149,7 @@
         document.body.classList.remove("noscroll");
         document.body.style = "";
         document.documentElement.scrollTop = temp;
-        window.onscroll = function (e) {
-            clearTimeout(hideTitleBar);
-            if (this.scrollY > this.oldScroll) {
-                hideTitleBar = setTimeout(() => document.getElementsByClassName("header")[0].style.top = "-4.75rem", 100);
-            }
-            else {
-                hideTitleBar = setTimeout(() => document.getElementsByClassName("header")[0].style.top = "0rem", 100);
-            }
-            this.oldScroll = this.scrollY;
-
-        }
+        window.onscroll = fancyScroll;
         hidetemp = setTimeout(() => { document.getElementById("menu-shade").classList.remove("visible") }, 250);
     }
     /*document.getElementById("menu-shade").addEventListener("touchend", hide, false);*/
