@@ -353,7 +353,7 @@ body {
 }
 
 body.noscroll {
-    position: fixed;
+    position: absolute;
     overflow-y: scroll;
 }
 
