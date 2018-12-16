@@ -493,7 +493,6 @@ div#three {
 div.about {
     width: 100%;
     overflow: hidden;
-    max-height: 90%;
     background-color: #f8f8f8;
     position: relative;
 }
@@ -559,6 +558,9 @@ div.aboutme p {
     }
     .footer {
         font-size: 18.5px;
+    }
+    div.about {
+        max-height: 90%;
     }
     div.about img.largerimage {
         display: inline-block;

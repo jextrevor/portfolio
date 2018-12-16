@@ -92,10 +92,10 @@
     let contactshow = 0;
     const fancyScroll = function (e) {
         clearTimeout(hideTitleBar);
-        if (this.scrollY > this.oldScroll) {
+        if (this.scrollY > this.oldScroll && this.scrollY != 0) {
             hideTitleBar = setTimeout(() => document.getElementsByClassName("header")[0].classList.add("hidden"), 100);
         }
-        else if (this.scrollY < this.oldScroll) {
+        else if (this.scrollY < this.oldScroll || this.scrollY == 0) {
             hideTitleBar = setTimeout(() => document.getElementsByClassName("header")[0].classList.remove("hidden"), 100);
         }
         this.oldScroll = this.scrollY;
