@@ -90,6 +90,7 @@
 <script>
     let hideTitleBar = 0;
     let contactshow = 0;
+    const el = document.scrollingElement || document.documentElement;
     const fancyScroll = function (e) {
         clearTimeout(hideTitleBar);
         if (this.scrollY > this.oldScroll && this.scrollY > 0) {
@@ -115,7 +116,6 @@
         stopScrolling();
     }
     const stopScrolling = function () {
-        const el = document.scrollingElement || document.documentElement;
         temp = el.scrollTop;
         document.body.style.top = `-${temp}px`;
         document.body.classList.add("noscroll");
@@ -124,7 +124,6 @@
     const resumeScrolling = function () {
         document.body.classList.remove("noscroll");
         document.body.style = "";
-        const el = document.scrollingElement || document.documentElement;
         el.scrollTop = temp;
         window.onscroll = fancyScroll;
     }
