@@ -394,9 +394,6 @@ body.noscroll {
 .projects h1 {
     font-size: calc(10vw + 2em);
     font-weight: 200;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
     max-width: 100%;
     color: #555;
 }
