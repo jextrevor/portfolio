@@ -139,6 +139,19 @@
     z-index: 901;
 }
 
+#test {
+    display:none;
+    position:absolute;
+    top:-0.5px;
+    left: 0;
+    right: 0;
+    bottom:0;
+    opacity:0;
+}
+#test.visible {
+    display:block;
+}
+
 .ripple-effect {
     position: fixed;
     top: 50%;
