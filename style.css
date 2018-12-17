@@ -387,8 +387,8 @@ body.noscroll {
 .projects {
     width: 100%;
     text-align: center;
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .projects h1 {
@@ -811,7 +811,7 @@ div.aboutme p {
         line-height: 140%;
     }
     .projects {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding-top: 8rem;
+        padding-bottom: 8rem;
     }
 }
