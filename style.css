@@ -385,7 +385,69 @@ body.noscroll {
 }
 
 .projects {
+    width: 100%;
+    text-align: center;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
 
+.projects h1 {
+    font-size: calc(10vw + 2em);
+    font-weight: 200;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 100%;
+    color: #555;
+}
+
+.project {
+    margin: 2rem;
+    border: 1px solid black;
+    background: #f8f8f8;
+    padding: 2rem;
+    text-align: left;
+    border-radius: 0.5rem;
+}
+
+.project h1 {
+    text-transform: uppercase;
+    font-size: calc(5vw + 1rem);
+    font-weight: 300;
+}
+
+.project p {
+    font-size: calc(1.5vw + 0.5rem);
+    line-height: 140%;
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+a.button {
+    display: inline-block;
+    background-color: #e8e8e8;
+    border-radius: 0.5rem;
+    line-height: 140%;
+    padding: 0.7rem;
+    border:1px solid #222;
+    color: #222;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.25s, background-color 0.25s;
+}
+a.button:hover{
+    background-color: #222;
+    color:#f8f8f8;
+}
+
+.project .label {
+    display: inline-block;
+    background-color: #36B2FF;
+    border-radius: 2rem;
+    line-height: 140%;
+    padding: 0.3rem;
+    color: white;
+    font-size: 0.9rem;
 }
 
 h1 {
@@ -639,6 +701,14 @@ div.aboutme p {
         overflow: hidden;
         max-width: 100%;
     }
+    .projects h1 {
+        font-size: calc(90px + 2em);
+        font-weight: 200;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 100%;
+    }
     .grays h1 {
         font-size: calc(90px + 2rem);
     }
@@ -733,5 +803,13 @@ div.aboutme p {
         font-size: calc(45px + 2em);
         font-weight: 200;
         white-space: nowrap;
+    }
+    .project h1 {
+        text-transform: uppercase;
+        font-size: calc(45px + 1rem);
+    }
+    .project p {
+        font-size: calc(14px + 0.5rem);
+        line-height: 140%;
     }
 }
