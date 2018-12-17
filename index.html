@@ -58,7 +58,7 @@
     </div>
 </div> -->
 <div id="contact">
-    <div class="ripple-effect" onclick="hidecontact()"></div>
+    <div class="ripple-effect"></div>
     <div id="contact-info" onclick="hidecontact()">
         <div>
             <h1>Contact Me</h1>
@@ -118,6 +118,7 @@
         document.documentElement.style.setProperty("--required-width", Math.sqrt(window.innerHeight * window.innerHeight + window.innerWidth * window.innerWidth) + "px");
         contactshow = setTimeout(() => {
             document.getElementById("contact-info").classList.add("visible");
+           // document.getElementById("test3").onclick = ""
         }, 750);
         document.getElementById("contact").classList.add("visible");
         stopScrolling();
@@ -125,7 +126,7 @@
     const stopScrolling = function () {
         temp = el.scrollTop;
         document.body.style.top = `-${temp}px`;
-        document.documentElement.style.height="101%";
+        //document.documentElement.style.height="101%";
         //document.getElementById("test2").style.top = `-${temp}px`;
         document.body.classList.add("noscroll");
         document.getElementById("test").classList.add("visible");
@@ -136,7 +137,7 @@
     const resumeScrolling = function () {
         document.body.classList.remove("noscroll");
         document.body.style = "";
-        document.documentElement.style.height="100%";
+        //document.documentElement.style.height="100%";
         //document.getElementById("test2").style = "";
         el.scrollTop = temp;
         window.onscroll = fancyScroll;
