@@ -86,6 +86,9 @@
     <img src="trevor3.jpg" alt="" class="largerimage" />
     <img src="trevor4.jpg" alt="" class="smallerimage" />
 </div>
+<div class="projects">
+
+</div>
 <div id="test">
 
 </div>
@@ -122,6 +125,7 @@
     const stopScrolling = function () {
         temp = el.scrollTop;
         document.body.style.top = `-${temp}px`;
+        document.documentElement.style.height="101%";
         //document.getElementById("test2").style.top = `-${temp}px`;
         document.body.classList.add("noscroll");
         document.getElementById("test").classList.add("visible");
@@ -132,6 +136,7 @@
     const resumeScrolling = function () {
         document.body.classList.remove("noscroll");
         document.body.style = "";
+        document.documentElement.style.height="100%";
         //document.getElementById("test2").style = "";
         el.scrollTop = temp;
         window.onscroll = fancyScroll;
