@@ -121,7 +121,7 @@
         document.body.style.top = `-${temp}px`;
         document.body.classList.add("noscroll");
         window.onscroll = function () { }
-        window.scrollBy(100);
+        window.scrollBy(0, 100);
     }
     const resumeScrolling = function () {
         document.body.classList.remove("noscroll");
@@ -143,13 +143,13 @@
         document.getElementById("menu").classList.add("visible");
         document.getElementById("menu-shade").classList.add("visible");
         document.getElementById("menu-shade").classList.add("fadein");
-        //stopScrolling();
+        stopScrolling();
     }
     hide = function () {
         document.getElementById("menu").classList.remove("visible");
         document.getElementById("menu-shade").classList.remove("fadein");
-        setTimeout(()=>{document.getElementById("menu-shade").classList.remove("visible");},250);
-        //resumeScrolling();
+        setTimeout(() => { document.getElementById("menu-shade").classList.remove("visible"); }, 250);
+        resumeScrolling();
     }
     /*document.getElementById("menu-shade").addEventListener("touchend", hide, false);*/
 </script>
