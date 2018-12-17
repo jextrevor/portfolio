@@ -140,16 +140,30 @@
 }
 
 #test {
-    display:none;
-    position:absolute;
-    top:-0.5px;
+    display: none;
+    position: absolute;
+    top: -100px;
     left: 0;
     right: 0;
-    bottom:0;
-    opacity:0;
+    bottom: 0;
+    opacity: 0;
 }
+
 #test.visible {
-    display:block;
+    display: block;
+}
+
+#test2 {
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: static;
+    overflow: auto;
+}
+
+#test2.visible {
+    position: fixed;
+    overflow-y: auto;
 }
 
 .ripple-effect {
