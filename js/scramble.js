@@ -1,7 +1,7 @@
-words = ["Learner","Thinker","Designer","Coder","Engineer"];
-index = -1;
+words = ["Trevor Jex","Learner","Thinker","Designer","Coder"];
+index = 0;
 statictime = 2000;
-dynamictime = 510;
+dynamictime = 500;
 function wait(){
     setTimeout(fadeout,statictime);
 }
@@ -14,7 +14,7 @@ function fadein(){
     if(index >= words.length){
         index = 0;
     }
-    document.getElementById("scramble").innerHTML = `${words[index]}.`;
+    document.getElementById("scramble").innerHTML = words[index];
     document.getElementById("scramble").classList.remove("hidden");
     setTimeout(wait,dynamictime);
 }

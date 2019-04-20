@@ -1,339 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Portfolio | Trevor Jex</title>
-<link rel="stylesheet" href="style.css" type="text/css">
-<link rel="icon" href="favicon.ico">
-<link href="font/css/open-iconic.min.css" rel="stylesheet">
-<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
-<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,600" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<div class="header-container">
-    <div class="header">
-        <div class="oi" data-glyph="menu" onclick="show()"></div>
-        <h1>Trevor Jex</h1>
-        <a href="https://github.com/jextrevor" target="_blank">GitHub</a>
-        <a href="https://stackoverflow.com/users/1997993/trevor-jex" target="_blank">Stack Overflow</a>
-        <a href="/resume.pdf" target="_blank">Resume</a>
-        <a href="#" onclick="contact()">Contact</a>
-    </div>
-    <div id="menu">
-        <div class="title">
-            <div class="border">
-                <div class="oi" data-glyph="menu" onclick="hide()"></div>
-                <h1>Trevor Jex</h1>
+
+<head>
+    <title>Trevor Jex</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#3498DB" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" data-toggle="modal" data-target="#contact" href="#" onclick="return false;">Trevor
+                Jex</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
+                aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/jextrevor" target="_blank">GitHub</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://stackoverflow.com/users/1997993/trevor-jex"
+                            target="_blank">Stack Overflow</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resume.pdf">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="modal" data-target="#contact" href="#"
+                            onclick="return false;">Contact</a>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="overflow">
-            <a href="https://github.com/jextrevor" target="_blank">GitHub</a>
-            <a href="https://stackoverflow.com/users/1997993/trevor-jex" target="_blank">Stack Overflow</a>
-            <a href="/resume.pdf" target="_blank">Resume</a>
-            <a href="#" onclick="hide();contact();">Contact</a>
+    </nav>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 id="scramble" class="display-4">Trevor Jex</h1>
+            <p class="lead">I am a software engineer specializing in Python and JavaScript development.</p>
+            <a href="#projects" class="btn btn-primary">My Projects</a>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#contact">Contact Me</button>
         </div>
     </div>
-</div>
-<div id="menu-shade" onclick="hide()" ontouchend="hide()"></div>
-<div class="stuffs-container">
-    <div class="stuffs">
-        <h1 id="scramble">Trevor Jex</h1>
-        <p>I am a software engineer specializing in Python and JavaScript development.</p>
-    </div>
-</div>
-</div>
-<!-- <div id="modal-container">
-    <div class="ripple-effect"></div>
-    <div class="menu-shade"></div>
-</div> -->
-<!-- <div class="grays-container">
-    <div class="grays" id="test">
-        <h1>About Me</h1>
-        <div id="two">
-            <div class="images"></div>
-            <p>Something something something</p>
-        </div>
-        <div id="three">
-            <div class="images"></div>
-            <p>Something something something</p>
-        </div>
-        <div class="images"></div>
-    </div>
-</div> -->
-<div id="contact">
-    <div class="ripple-effect"></div>
-    <div id="contact-info" onclick="hidecontact()" ontouchend="hidecontact()">
-        <div>
-            <h1>Contact Me</h1>
-            <div>
-                <p>Feel free to reach out to me through phone or email.</p>
-                <p>Phone: <a href="sms:8018221805" target="_blank" onclick="event.stopPropagation();">801-822-1805</a></p>
-                <p>Email: <a href="mailto:jextrevor@gmail.com" target="_blank" onclick="event.stopPropagation();">jextrevor@gmail.com</a></p>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-7 col-xl-8">
+                <h1>About Me</h1>
+                <p class="lead">Student and Software Engineer</p>
+                <p>My name is Trevor Jex, and I graduated from American Fork High
+                    School on May 31, 2018. I am currently studying Computer Science at
+                    Brigham Young
+                    University. I have a passion for learning, creating and designing.</p>
+                <p>My favorite languages are Python and JavaScript. I love web design, especially when it comes to CSS
+                    or websockets, and I love Linux as well as Android.</p>
+                <p>My hobbies include playing the piano, playing tennis and frisbee, listening to new-age music, and
+                    designing innovative apps and programs.
+                </p>
+                <p>
+                    I currently work as part of an agile development team for Brigham Young University Broadcasting. Our
+                    work includes the websites and apps for BYUtv and BYU Radio.
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-5 col-xl-4">
+                <img src="media/trevor.jpg" srcset="media/trevor2x.jpg 2x" class="rounded" width="100%" />
             </div>
         </div>
     </div>
-</div>
-
-<div class="about">
-    <div class="yourmom"></div>
-    <div class="aboutme">
-        <h1>About Me</h1>
-        <p>&nbsp;</p>
-        <p class="one">Software developer at Brigham Young University Broadcasting</p>
-        <p>&nbsp;</p>
-        <p class="two">Linux and Android enthusiast</p>
-        <p>&nbsp;</p>
-        <p class="three">Avid musician (piano and cello, new age music)</p>
-        <p>&nbsp;</p>
-        <p class="four">CS major at Brigham Young University</p>
+    <div class="container pt-3">
+        <a name="projects"></a>
+        <hr />
+        <h1 class="mb-3">My Projects</h1>
+        <div class="card-columns">
+            <div class="card bg-light">
+                <img class="card-img-top" src="media/spaceserver.png" alt="" />
+                <div class="card-body">
+                    <h4 class="card-title">Space Server</h4>
+                    <p class="card-text">
+                        <span class="badge badge-pill badge-info">Javascript</span>
+                        <span class="badge badge-pill badge-info">Python</span>
+                    </p>
+                    <p class="card-text">Backbone of Star Trek-like space simulations. Uses SocketIO and a custom
+                        state-syncing backend.</p>
+                    <a href="http://spaceserver.herokuapp.com" target="_blank" class="btn btn-sm btn-primary">View
+                        Project</a>
+                    <a href="https://github.com/jextrevor/spaceserver" target="_blank"
+                        class="btn btn-sm btn-secondary">View Git Repo</a>
+                </div>
+            </div>
+            <div class="card bg-light">
+                <!--<img class="card-img-top" src="media/sciencefair.png" alt="" />-->
+                <div class="card-body">
+                    <h4 class="card-title">Camera-Based Motion Detection</h4>
+                    <p class="card-text">
+                        <span class="badge badge-pill badge-info">Python</span>
+                    </p>
+                    <p class="card-text">Human presence detection based on the Raspberry Pi camera. Winner of 1st Place
+                        Computer Science award at 2016 CUSF.
+                    </p>
+                    <a href="https://github.com/jextrevor/ScienceFair" target="_blank"
+                        class="btn btn-sm btn-secondary">View Git Repo</a>
+                </div>
+            </div>
+            <div class="card bg-light">
+                <!--<img class="card-img-top" src="media/kevinskarnival.png" alt="" />-->
+                <div class="card-body">
+                    <h4 class="card-title">Kevin's Karnival</h4>
+                    <p class="card-text">
+                        <span class="badge badge-pill badge-info">HTML</span>
+                    </p>
+                    <p class="card-text">Official website for Kevin's Karnival, a fundraiser hosted by American Fork
+                        High School NHS that raised $37K.</p>
+                    <a href="https://kevinskarnival.com" target="_blank" class="btn btn-sm btn-primary">View Project</a>
+                </div>
+            </div>
+            <div class="card bg-light">
+                <img class="card-img-top" src="media/the23rdlog.png" alt="" />
+                <div class="card-body">
+                    <h4 class="card-title">The 23rd Log</h4>
+                    <p class="card-text">
+                        <span class="badge badge-pill badge-info">JavaScript</span>
+                    </p>
+                    <p class="card-text">Video game entry for the Technology Student Association (TSA) competition,
+                        created with 3 fellow students.</p>
+                    <a href="https://gitlab.com/projectn/the23rdlog" target="_blank"
+                        class="btn btn-sm btn-secondary">View Git Repo</a>
+                </div>
+            </div>
+            <div class="card bg-light">
+                <img class="card-img-top" src="media/automation.jpg" alt="" />
+                <div class="card-body">
+                    <h4 class="card-title">Automation</h4>
+                    <p class="card-text">
+                        <span class="badge badge-pill badge-info">Python</span>
+                    </p>
+                    <p class="card-text">Automatic music player and alarm clock for the Raspberry Pi, complete with
+                        weather and email checking capabilities.</p>
+                    <a href="https://github.com/jextrevor/Automation" target="_blank"
+                        class="btn btn-sm btn-secondary">View Git Repo</a>
+                </div>
+            </div>
+            <div class="card bg-light">
+                <img class="card-img-top mt-1" src="media/quiz.png" alt="" />
+                <div class="card-body">
+                    <h4 class="card-title">Quiz</h4>
+                    <p class="card-text">
+                        <span class="badge badge-pill badge-info">Javascript</span>
+                        <span class="badge badge-pill badge-info">Python</span>
+                    </p>
+                    <p class="card-text">Interactive crowd quiz that displays quiz results as they are submitted.
+                        Created for an English 11 Honors project.</p>
+                    <a href="https://github.com/jextrevor/quiz" target="_blank" class="btn btn-sm btn-secondary">View
+                        Git Repo</a>
+                </div>
+            </div>
+            <div class="card bg-light">
+                <div class="card-body">
+                    <h4 class="card-title">Coder</h4>
+                    <p class="card-text">
+                        <span class="badge badge-pill badge-info">Javascript</span>
+                        <span class="badge badge-pill badge-info">Python</span>
+                    </p>
+                    <p class="card-text">Bookmarklet/Python script that encodes messages into invisible characters and
+                        back.</p>
+                    <a href="https://github.com/jextrevor/coder" target="_blank" class="btn btn-sm btn-secondary">View
+                        Git Repo</a>
+                </div>
+            </div>
+            <div class="card bg-light">
+                <img class="card-img-top" src="media/andromeda.png" alt="" />
+                <div class="card-body">
+                    <h4 class="card-title">Andromeda</h4>
+                    <p class="card-text">
+                        <span class="badge badge-pill badge-info">React</span>
+                        <span class="badge badge-pill badge-info">Javascript</span>
+                        <span class="badge badge-pill badge-warning">Unfinished</span>
+                    </p>
+                    <p class="card-text">Abandoned project to rebuild the Space Server with two fellow students. Created
+                        with Node.JS, SocketIO and React.</p>
+                    <a href="https://github.com/X-12/andromeda" target="_blank" class="btn btn-sm btn-secondary">View
+                        Git Repo</a>
+                </div>
+            </div>
+            <div class="card bg-light">
+                <img class="card-img-top" src="media/rasm.png" alt="" />
+                <div class="card-body">
+                    <h4 class="card-title">Really Awesome Space Missions</h4>
+                    <p class="card-text">
+                        <span class="badge badge-pill badge-info">Python</span>
+                        <span class="badge badge-pill badge-warning">Unfinished</span>
+                    </p>
+                    <p class="card-text">Current project to rebuild the Space Server for commercial use. Feel free to
+                        contact me for access to the code.</p>
+                    <a href="https://gitlab.com/jextrevor/rasm" target="_blank" class="btn btn-sm btn-secondary">View
+                        Git Repo</a>
+                    <a href="https://docs.google.com/document/d/1NQm2rtbJ5_WUPhlhg0gslRzUmh6Un2ZkUVqvXcefoPI/edit?usp=sharing"
+                        target="_blank" class="btn btn-sm btn-info">View Handbook</a>
+                </div>
+            </div>
+            <div class="card bg-light">
+                <!--<img class="card-img-top" src="media/scum.png" alt="" />-->
+                <div class="card-body">
+                    <h4 class="card-title">Scum</h4>
+                    <p class="card-text">
+                        <span class="badge badge-pill badge-info">Python</span>
+                        <span class="badge badge-pill badge-info">Javascript</span>
+                    </p>
+                    <p class="card-text">Simple program to allow real-time play of card game Scum over the web.</p>
+                    <a href="https://scum.trevorjex.com" target="_blank" class="btn btn-sm btn-primary">View Project</a>
+                    <a href="https://github.com/jextrevor/scum" target="_blank" class="btn btn-sm btn-secondary">View
+                        Git Repo</a>
+                </div>
+            </div>
+            <div class="card bg-light">
+                <img class="card-img-top" src="media/complem8.png" alt="" />
+                <div class="card-body">
+                    <h4 class="card-title">Complem8</h4>
+                    <p class="card-text">
+                        <span class="badge badge-pill badge-info">Javascript</span>
+                    </p>
+                    <p class="card-text">A web app that displays random compliments. Created with 2 fellow students for
+                        English 11 Honors.</p>
+                    <a href="https://github.com/jextrevor/complem8" target="_blank"
+                        class="btn btn-sm btn-secondary">View Git Repo</a>
+                </div>
+            </div>
+            <div class="card bg-light">
+                <!--<img class="card-img-top" src="media/tjc.png" alt="" />-->
+                <div class="card-body">
+                    <h4 class="card-title">Trevor Jex Communications</h4>
+                    <p class="card-text">
+                        <span class="badge badge-pill badge-info">PHP</span>
+                        <span class="badge badge-pill badge-info">MySQL</span>
+                    </p>
+                    <p class="card-text">PHP website to read and send basic messages to other users of the site.</p>
+                    <a href="https://github.com/jextrevor/TJC" target="_blank" class="btn btn-sm btn-secondary">View Git
+                        Repo</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <img src="trevor3.jpg" alt="" class="largerimage" />
-    <img src="trevor4.jpg" alt="" class="smallerimage" />
-</div>
-
-<div class="projects">
-    <h1>My Projects</h1>
-    <!-- <div class="project">
-        <h1>Automation</h1>
-        <div class="label">Python</div>
-        <div class="label">Javascript</div>
-
-        <p>Automatic music player and alarm clock for the Raspberry Pi, complete with weather and email checking
-            capabilities.</p>
-        <a href="https://github.com/jextrevor/automation" target="_blank" class="button">View Git Repo</a>
-    </div> -->
-    <!-- placeholder -->
-
-
-    <div class="project">
-        <h1>Space Server</h1>
-
-        <div class="label">Javascript</div>
-        <div class="label">Python</div>
-
-        <p>Backbone of Star Trek-like space simulations. Uses SocketIO and a custom state-syncing backend.</p>
-        <a href="http://spaceserver.herokuapp.com" target="_blank" class="button">View Project</a>
-        <a href="https://github.com/jextrevor/spaceserver" target="_blank" class="button">View Git Repo</a>
+    <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Contact</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Feel free to reach out to me through phone or email.</p>
+                    <p class="text-primary">Phone:
+                        <a href="sms:8018221805">801-822-1805</a>
+                    </p>
+                    <p class="text-primary">Email:
+                        <a href="mailto:jextrevor@gmail.com">jextrevor@gmail.com</a>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
-
-
-
-    <div class="project">
-        <h1>Camera-Based Motion Detection</h1>
-
-        <div class="label">Python</div>
-
-        <p>Human presence detection based on the Raspberry Pi camera. Winner of 1st Place Computer Science award at
-            2016
-            CUSF.</p>
-
-        <a href="https://github.com/jextrevor/ScienceFair" target="_blank" class="button">View Git Repo</a>
-    </div>
-
-
-
-    <div class="project">
-        <h1>Kevin's Karnival</h1>
-
-        <div class="label">HTML</div>
-
-        <p>Official website for Kevin's Karnival, a fundraiser hosted by American Fork High School NHS that raised
-            $37K.</p>
-        <a href="https://kevinskarnival.com" target="_blank" class="button">View Project</a>
-    </div>
-
-
-
-    <div class="project">
-        <h1>The 23rd Log</h1>
-
-        <div class="label">JavaScript</div>
-
-        <p>Video game entry for the Technology Student Association (TSA) competition, created with 3 fellow students.</p>
-        <a href="https://gitlab.com/projectn/the23rdlog" target="_blank" class="button">View Git Repo</a>
-    </div>
-
-
-
-    <div class="project">
-        <h1>Automation</h1>
-
-        <div class="label">Python</div>
-
-        <p>Automatic music player and alarm clock for the Raspberry Pi, complete with weather and email checking
-            capabilities.</p>
-        <a href="https://github.com/jextrevor/Automation" target="_blank" class="button">View Git Repo</a>
-    </div>
-
-
-
-    <div class="project">
-        <h1>Quiz</h1>
-
-        <div class="label">Javascript</div>
-        <div class="label">Python</div>
-
-        <p>Interactive crowd quiz that displays quiz results as they are submitted. Created for an English 11 Honors
-            project.</p>
-        <a href="https://github.com/jextrevor/quiz" target="_blank" class="button">View Git Repo</a>
-    </div>
-
-
-    <div class="project">
-        <h1>Coder</h1>
-
-        <div class="label">Javascript</div>
-        <div class="label">Python</div>
-
-        <p>Bookmarklet/Python script that encodes messages into invisible characters and back.</p>
-        <a href="https://github.com/jextrevor/coder" target="_blank" class="button">View Git Repo</a>
-    </div>
-
-
-
-    <div class="project">
-        <h1>Andromeda</h1>
-
-        <div class="label">React</div>
-        <div class="label">Javascript</div>
-
-
-        <p>Abandoned project to rebuild the Space Server with two fellow students. Created with Node.JS, SocketIO and
-            React.</p>
-        <a href="https://github.com/X-12/andromeda" target="_blank" class="button">View Git Repo</a>
-    </div>
-
-
-
-    <div class="project">
-        <h1>Really Awesome Space Missions</h1>
-
-        <div class="label">Python</div>
-
-
-        <p>Current project to rebuild the Space Server for commercial use. Feel free to contact me for access to the
-            code.</p>
-        <a href="https://gitlab.com/jextrevor/rasm" target="_blank" class="button">View Git Repo</a>
-        <a href="https://docs.google.com/document/d/1NQm2rtbJ5_WUPhlhg0gslRzUmh6Un2ZkUVqvXcefoPI/edit?usp=sharing"
-            target="_blank" class="button">View Handbook</a>
-    </div>
-
-
-
-    <div class="project">
-        <h1>Scum</h1>
-
-        <div class="label">Python</div>
-        <div class="label">Javascript</div>
-
-        <p>Simple program to allow real-time play of card game Scum over the web.</p>
-        <a href="https://trevorjex-scum.herokuapp.com" target="_blank" class="button">View Project</a>
-        <a href="https://github.com/jextrevor/scum" target="_blank" class="button">View Git Repo</a>
-    </div>
-
-
-
-    <div class="project">
-        <h1>Complem8</h1>
-
-        <div class="label">Javascript</div>
-
-        <p>A web app that displays random compliments. Created with 2 fellow students for English 11 Honors.</p>
-        <a href="https://github.com/jextrevor/complem8" target="_blank" class="button">View Git Repo</a>
-    </div>
-
-
-
-    <div class="project">
-        <h1>Trevor Jex Communications</h1>
-
-        <div class="label">PHP</div>
-        <div class="label">MySQL</div>
-
-        <p>PHP website to read and send basic messages to other users of the site.</p>
-        <a href="https://github.com/jextrevor/TJC" target="_blank" class="button">View Git Repo</a>
-    </div>
-
-    <!-- placeholder 2 -->
-</div>
-<div id="test">
-
-</div>
-<p class="footer">Copyright &copy; 2018. Built and designed by Trevor Jex. All rights reserved.</p>
-<script>
-    let hideTitleBar = 0;
-    let contactshow = 0;
-    let temp = 0;
-    const el = document.scrollingElement || document.documentElement;
-    const fancyScroll = function (e) {
-        clearTimeout(hideTitleBar);
-        if (this.scrollY > this.oldScroll && this.scrollY > 0) {
-            hideTitleBar = setTimeout(() => document.getElementsByClassName("header")[0].classList.add("hidden"), 100);
-        }
-        else if (this.scrollY < this.oldScroll || this.scrollY <= 0) {
-            hideTitleBar = setTimeout(() => document.getElementsByClassName("header")[0].classList.remove("hidden"), 100);
-        }
-        this.oldScroll = this.scrollY;
-    }
-    window.addEventListener("scroll", function () {
-        if (document.getElementsByClassName("about")[0].getBoundingClientRect().y < this.innerHeight) {
-            document.getElementsByClassName("about")[0].classList.add("visible");
-        }
-    });
-    const contact = function () {
-        event.preventDefault();
-        document.documentElement.style.setProperty("--required-width", Math.sqrt(window.innerHeight * window.innerHeight + window.innerWidth * window.innerWidth) + "px");
-        contactshow = setTimeout(() => {
-            document.getElementById("contact-info").classList.add("visible");
-            // document.getElementById("test3").onclick = ""
-        }, 750);
-        document.getElementById("contact").classList.add("visible");
-        stopScrolling();
-    }
-    const stopScrolling = function () {
-        temp = el.scrollTop;
-        document.body.style.top = `-${temp}px`;
-        //document.documentElement.style.height="101%";
-        //document.getElementById("test2").style.top = `-${temp}px`;
-        document.body.classList.add("noscroll");
-        document.getElementById("test").classList.add("visible");
-        //document.getElementById("test2").classList.add("visible");
-        window.onscroll = function () { }
-        window.scrollBy(0, 100);
-    }
-    const resumeScrolling = function () {
-        document.body.classList.remove("noscroll");
-        document.body.style = "";
-        //document.documentElement.style.height="100%";
-        //document.getElementById("test2").style = "";
-        el.scrollTop = temp;
-        window.onscroll = fancyScroll;
-        document.getElementById("test").classList.remove("visible");
-        //document.getElementById("test2").classList.remove("visible");
-    }
-    const hidecontact = function () {
-        document.documentElement.style.setProperty("--required-width", Math.sqrt(window.innerHeight * window.innerHeight + window.innerWidth * window.innerWidth) + "px");
-        clearTimeout(contactshow);
-        document.getElementById("contact-info").classList.remove("visible");
-        document.getElementById("contact").classList.remove('visible');
-        resumeScrolling();
-    }
-    window.onscroll = fancyScroll;
-    let hidetemp = 0;
-    show = function () {
-        clearTimeout(hidetemp);
-        document.getElementById("menu").classList.add("visible");
-        document.getElementById("menu-shade").classList.add("visible");
-        document.getElementById("menu-shade").classList.add("fadein");
-
-        stopScrolling();
-    }
-    hide = function () {
-        document.getElementById("menu").classList.remove("visible");
-        document.getElementById("menu-shade").classList.remove("fadein");
-
-        setTimeout(() => { document.getElementById("menu-shade").classList.remove("visible"); }, 250);
-        resumeScrolling();
-    }
-    /*document.getElementById("menu-shade").addEventListener("touchend", hide, false);*/
-</script>
-<script src="scramble.js"></script>
+    <footer>
+        <div class="container">
+            <hr />
+            <p>Built and designed by Trevor Jex. Copyright &copy; 2019. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/scramble.js"></script>
+    <script src="js/shuffle.js"></script>
+</body>
 
 </html>
