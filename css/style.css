@@ -28,9 +28,11 @@
 .card.border-primary.p-1 {
   background-color: #f8f8f8;
 }
+.jumbotron {
+  overflow: hidden;
+}
 #scramble {
   position: relative;
-  overflow: hidden;
 }
 #scramble.hidden {
   opacity: 0;
