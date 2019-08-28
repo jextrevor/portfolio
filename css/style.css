@@ -30,6 +30,7 @@
 }
 #scramble {
   position: relative;
+  overflow: hidden;
 }
 #scramble.hidden {
   opacity: 0;
