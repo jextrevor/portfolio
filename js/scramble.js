@@ -2,7 +2,7 @@ words = ["Trevor Jex", "Learner", "Thinker", "Designer", "Coder"];
 index = 0;
 firsttime = 2000;
 statictime = 2500;
-dynamictime = 500;
+dynamictime = 600;
 function wait() {
   setTimeout(fadeout, statictime);
 }
